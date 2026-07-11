@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Como montar um negócio de serviços de IA · INEMA.CLUB PRO</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0E0D14;--bg2:#15131d;--panel:#1a1824;--ink:#ECE6D9;--ink-soft:#C7C2D0;--muted:#948DA6;--faint:#6C6580;
+    --line:#2A2637;--line2:#37324a;--accent:#7CE0C6;--accent-ink:#0E0D14;--warm:#F2B45C;
+    --serif:"Newsreader",Georgia,serif;--sans:"Inter",system-ui,sans-serif;--mono:"Space Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:inherit}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 clamp(24px,5vw,60px)}
+  header.top{padding:26px 0}
+  header.top .wrap{display:flex;align-items:center;gap:10px}
+  header.top .mark{font-family:var(--mono);font-size:12px;letter-spacing:.1em;color:var(--accent);text-decoration:none;font-weight:700}
+  header.top .pro{background:var(--accent);color:var(--accent-ink);border-radius:4px;padding:2px 6px;font-size:9.5px;font-weight:700;letter-spacing:.1em;text-decoration:none;margin-left:8px}
+  header.top .course{color:var(--muted);font-size:12px;letter-spacing:.04em;border-left:1px solid var(--line2);padding-left:10px;margin-left:2px;font-family:var(--mono)}
+  .hero{position:relative;padding:10vh 0 9vh;border-bottom:1px solid var(--line);overflow:hidden}
+  .hero::before{content:"";position:absolute;inset:0;z-index:0;background:radial-gradient(55% 48% at 80% 20%,rgba(124,224,198,.14),transparent 60%),radial-gradient(90% 90% at 50% 40%,var(--bg2),var(--bg) 72%)}
+  .hero .wrap{position:relative;z-index:1}
+  .kicker{font-family:var(--mono);font-size:12px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);margin:0 0 18px}
+  h1{font-family:var(--serif);font-weight:500;font-size:clamp(36px,6vw,64px);line-height:1.05;letter-spacing:-.02em;margin:0 0 22px;max-width:18ch}
+  h1 em{font-style:italic;color:var(--accent)}
+  .lead{font-family:var(--serif);font-size:clamp(18px,2vw,22px);line-height:1.55;color:var(--ink-soft);max-width:46ch;margin:0 0 34px}
+  .cta{display:inline-block;font-family:var(--mono);font-size:13px;letter-spacing:.06em;background:var(--accent);color:var(--accent-ink);text-decoration:none;border-radius:99px;padding:15px 26px;font-weight:700}
+  .cta:hover{opacity:.92}
+  .sub{color:var(--muted);font-size:13.5px;margin-top:14px;font-family:var(--mono)}
+
+  section{padding:8vh 0}
+  .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+  h2{font-family:var(--serif);font-weight:500;font-size:clamp(26px,3.6vw,36px);margin:0 0 28px}
+
+  .resultados{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+  .resultado{border:1px solid var(--line);border-radius:16px;background:var(--panel);padding:22px 24px}
+  .resultado p{margin:0;font-size:15px;color:var(--ink-soft);line-height:1.55}
+  .resultado p b{color:var(--ink)}
+
+  .aulas{display:grid;gap:14px}
+  .au{display:grid;grid-template-columns:52px 1fr auto;gap:18px;align-items:center;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px 22px}
+  .au .num{font-family:var(--serif);font-size:26px;color:var(--accent);text-align:center}
+  .au h3{font-family:var(--serif);font-weight:500;font-size:19px;margin:0 0 4px}
+  .au p{margin:0;color:var(--muted);font-size:14px}
+  .au .meta{font-family:var(--mono);font-size:11px;color:var(--accent);white-space:nowrap;text-align:right}
+  .au:hover{border-color:var(--accent)}
+
+  .publico{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+  .publico .col{background:var(--panel);padding:22px 24px}
+  .publico .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;margin:0 0 12px}
+  .publico .col.sim .lbl{color:var(--accent)}
+  .publico .col.nao .lbl{color:var(--muted)}
+  .publico ul{margin:0;padding:0;list-style:none}
+  .publico li{position:relative;padding-left:20px;margin:0 0 10px;color:var(--ink-soft);font-size:14.5px;line-height:1.5}
+  .publico li::before{content:"—";position:absolute;left:0;color:var(--faint)}
+
+  footer{border-top:1px solid var(--line);padding:6vh 0 8vh;color:var(--faint);text-align:center;font-family:var(--serif);font-style:italic}
+
+  @media(max-width:720px){ .publico{grid-template-columns:1fr} }
+  @media(prefers-reduced-motion:reduce){*{animation:none!important}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap">
+  <a class="mark" href="https://inema.club" target="_blank" rel="noopener">INEMA.CLUB</a>
+  <a class="pro" href="https://inema.pro" target="_blank" rel="noopener">PRO</a>
+  <span class="course">Negócio de serviços de IA</span>
+</div></header>
+
+<section class="hero"><div class="wrap">
+  <p class="kicker">IA para o seu trabalho</p>
+  <h1>Monte um negócio de <em>serviços de IA</em> sem saber programar</h1>
+  <p class="lead">Oito aulas práticas para transformar a profissão que você já tem no seu primeiro serviço de IA pago — no seu ritmo, direto no navegador.</p>
+  <a class="cta" href="curso.html#trilha">começar agora →</a>
+  <p class="sub">~20 min por aula · nada para baixar · funciona no celular e no computador</p>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">O que você sai sabendo fazer</p>
+  <h2>Resultado, não teoria</h2>
+  <div class="resultados">
+    <div class="resultado"><p><b>Fechar o primeiro trabalho pago</b> — com 3 oportunidades mapeadas no seu círculo e um plano de 30 dias para transformar uma delas em contrato.</p></div>
+    <div class="resultado"><p><b>Entregar com padrão profissional</b> — motor de conteúdo, assistente com a memória do seu negócio e um gabarito de testes antes de qualquer entrega.</p></div>
+    <div class="resultado"><p><b>Vender para quem paga mais</b> — o mapa de 6 perguntas que transforma conversa com empresa grande em contrato assinado.</p></div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Para quem é</p>
+  <h2>Feito para o seu momento</h2>
+  <div class="publico">
+    <div class="col sim">
+      <p class="lbl">é para você se</p>
+      <ul>
+        <li>Você é contador(a), advogado(a), corretor(a) de imóveis, assistente administrativa — ou outra profissão liberal ou de escritório — e quer uma renda nova com IA.</li>
+        <li>Você usa bem o computador no dia a dia, mas nunca programou — e não pretende programar.</li>
+        <li>Você tem de 30 minutos a 1 hora por sessão e prefere aprender fazendo.</li>
+      </ul>
+    </div>
+    <div class="col nao">
+      <p class="lbl">não é para você se</p>
+      <ul>
+        <li>Você já desenvolve software e busca conteúdo técnico avançado de agentes e automação.</li>
+        <li>Você quer um curso de vídeo-aulas tradicional — aqui o formato é leitura guiada com prática.</li>
+      </ul>
+    </div>
+  </div>
+</div></section>
+
+<section><div class="wrap">
+  <p class="eyebrow">Trilha</p>
+  <h2>Do primeiro contato ao contrato</h2>
+  <div class="aulas">
+    <a class="au" href="curso.html#aula-1">
+      <div class="num">1</div>
+      <div><h3>Seus primeiros 30 dias</h3><p>Saia com 3 oportunidades reais mapeadas e um plano de 30 dias para o primeiro trabalho pago.</p></div>
+      <div class="meta">22 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-2">
+      <div class="num">2</div>
+      <div><h3>O motor por dentro: as 3 camadas</h3><p>Desenhe as 3 camadas de qualquer automação profissional — e identifique a que falta em qualquer proposta.</p></div>
+      <div class="meta">20 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-3">
+      <div class="num">3</div>
+      <div><h3>Seu motor de conteúdo</h3><p>Um pedido de conteúdo testado que transforma 1 texto seu em publicações para 2 redes diferentes.</p></div>
+      <div class="meta">24 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-4">
+      <div class="num">4</div>
+      <div><h3>O atendente que fala: IA por voz</h3><p>Os 5 jeitos como um atendente de voz falha — e o que exigir antes de colocar um na frente de cliente.</p></div>
+      <div class="meta">20 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-5">
+      <div class="num">5</div>
+      <div><h3>Confiar ou conferir? Teste antes do cliente</h3><p>Um gabarito de 5 perguntas do seu trabalho para dizer, com número, se a IA está pronta.</p></div>
+      <div class="meta">22 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-6">
+      <div class="num">6</div>
+      <div><h3>Um assistente com a memória do seu negócio</h3><p>O manual que faz qualquer assistente de IA responder do seu jeito desde a primeira pergunta.</p></div>
+      <div class="meta">22 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-7">
+      <div class="num">7</div>
+      <div><h3>Agentes que trabalham enquanto você dorme</h3><p>Quanta liberdade dar a um agente de IA — e onde fica o botão de parar de cada tarefa.</p></div>
+      <div class="meta">20 min</div>
+    </a>
+    <a class="au" href="curso.html#aula-8">
+      <div class="num">8</div>
+      <div><h3>Vendendo para empresas grandes</h3><p>O mapa de 6 perguntas que transforma conversa com empresa grande em contrato assinado.</p></div>
+      <div class="meta">22 min</div>
+    </a>
+  </div>
+  <p style="margin-top:28px"><a class="cta" href="curso.html#trilha">ver a trilha completa →</a></p>
+</div></section>
+
+<footer><div class="wrap">Como montar um negócio de serviços de IA · INEMA.CLUB PRO</div></footer>
+
+</body>
+</html>
