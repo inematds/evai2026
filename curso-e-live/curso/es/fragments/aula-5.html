@@ -1,0 +1,265 @@
+<!-- ===== AULA 5 — Confiar ou conferir? Teste antes do cliente (tipo FUNDAMENTO) ===== -->
+<!-- Decisão de figura: SEM .termdemo nesta aula — nenhum step tem comando real a demonstrar;
+     todos os 4 slots da rail usam .fig de diagrama-de-mecanismo, conforme SKILL.md §termdemo. -->
+<section class="view" data-aula="5" data-tempo="22min" id="v-aula-5">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Curso · Lección 5</p>
+<h1>¿Confiar o <em>¿comprobar?</em><br/>Prueba antes que el cliente</h1>
+<p class="promise">Al final de esta clase prepararás una clave de respuestas con 5 preguntas de tu propio trabajo y pondrás a prueba una IA con ella. Así podrás decir, con un número, si está lista para atender a tu cliente.</p>
+<p class="why">La IA responde mal con la misma seguridad con que responde bien. Quien ofrece un servicio sin probarlo descubre el error de la peor manera: frente al cliente, después de cobrar. Una prueba sencilla, hecha de antemano, cambia el «creo que funciona» por «funcionó en 4 de 5 casos, y sé exactamente cuál es el quinto».</p>
+<p class="cue"><span class="arw">↓</span> cargo para estudiar</p>
+</div>
+<!-- herofig: METÁFORA — folha de prova sendo corrigida com o gabarito ao lado (nunca robô/cérebro) -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<!-- folha de prova -->
+<rect height="186" rx="8" stroke="var(--line2)" stroke-width="1.5" width="136" x="36" y="26"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="2" x="50" y="48">PRUEBA</text>
+<!-- 5 questões: número + linha de resposta + marcação -->
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="74">1.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="71" y2="71"></line>
+<path d="M148 66 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="102">2.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="99" y2="99"></line>
+<path d="M148 94 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="130">3.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="127" y2="127"></line>
+<path d="M147 121 l10 10 M157 121 l-10 10" stroke="var(--warm)" stroke-linecap="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="158">4.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="155" y2="155"></line>
+<path d="M148 150 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="186">5.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="183" y2="183"></line>
+<path d="M148 178 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- gabarito ao lado -->
+<rect height="112" rx="6" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5" width="76" x="192" y="58"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" letter-spacing="1.5" x="202" y="76">CLAVE DE RESPUESTAS</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="90" y2="90"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="106" y2="106"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="122" y2="122"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="138" y2="138"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="154" y2="154"></line>
+<!-- caneta corrigindo, apoiada sobre a questão errada -->
+<g transform="rotate(38 196 128)">
+<rect height="11" rx="5" stroke="var(--ink-soft)" stroke-width="1.5" width="58" x="190" y="122"></rect>
+<path d="M190 122 l-12 5.5 l12 5.5 z" stroke="var(--ink-soft)" stroke-linejoin="round" stroke-width="1.5"></path>
+<line stroke="var(--ink-soft)" stroke-width="1.5" x1="248" x2="248" y1="122" y2="133"></line>
+</g>
+<!-- nota final -->
+<text fill="var(--accent)" font-family="var(--mono)" font-size="11" x="192" y="196">nota: 4/5</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<!-- ============ STEP 1 ============ -->
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> La IA se equivoca con la misma seguridad con que acierta</h2>
+<p>Un empleado que no sabe una respuesta suele titubear: "creo que es así, déjame confirmarlo". Ese titubeo es una alarma — y aprendiste a escucharla toda la vida. La IA nunca titubea. Entrega la respuesta equivocada con el mismo tono firme, bien escrito y organizado que la respuesta correcta. No hay alarma. Por eso el ojo por sí solo no detecta el error: estás entrenado para desconfiar de la vacilación, y ahí no hay ninguna vacilación.</p>
+<p>Quien vende un servicio de IA sin probarlo está apostando a que los errores quedarán lejos del cliente. No es así. Aparecen justo en la entrega: en el documento que el cliente lee, en el número que comparte con otros; y entonces el problema deja de ser de la herramienta y pasa a ser tuyo, con tu nombre en la factura.</p>
+<!-- exemplo-profissao -->
+<p>Un abogado le pidió a la IA el resumen de un contrato de alquiler. El resumen era impecable: bien organizado, con lenguaje claro y mencionaba una multa por rescisión "equivalente a tres meses de alquiler". Pero esa cláusula no existe en ese contrato; la IA la completó con lo habitual en el mercado, con el mismo tono seguro que el resto. Quien confía en el resumen lleva una cláusula inventada a la reunión con el cliente.</p>
+<p>La defensa de quien trabaja seriamente con esto tiene un nombre sencillo: leer los errores. Antes de opinar si a la IA «le va bien» en una tarea, lee unas 20 respuestas reales suyas para esa tarea, una por una, y anota todo lo que te moleste, aunque todavía no sepas cómo llamar al problema. Una opinión sin esa lectura no es una evaluación: es una impresión. Y una impresión es lo que falla frente al cliente.</p>
+<div class="qbefore-after">
+<div class="qba-col qba-before">
+<p class="qba-lbl">Antes: entrega sin prueba</p>
+<p class="qba-txt">"Lo ejecuté dos veces, quedó bien, lo envié." El cliente descubre el error, el retrabajo sale gratis y la confianza en el servicio nace resquebrajada.</p>
+</div>
+<div class="qba-col qba-depois">
+<p class="qba-lbl">Después — entrega con solucionario y calificación</p>
+<p class="qba-txt">"Lo probé en 5 casos reales: acertó en 4. Este es el caso en el que falla, y pasa por mi revisión antes de salir." Error conocido, controlado y cobrable.</p>
+</div>
+<p class="qba-saldo"><b>Saldo:</b> ~15 minutos de prueba convierten la impresión en un número (4 de 5): el error aparece para ti antes de la entrega, no para el cliente después.</p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">marcar como leído</button>
+</section>
+<!-- ============ STEP 2 ============ -->
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> La clave de respuestas: preguntas cuya respuesta ya conoces</h2>
+<p>¿Cómo probar sin volverte rehén de tu propia impresión? De la misma manera que se corrige un examen de oposición: con una <span class="gterm" data-def="Conjunto pequeno de perguntas do seu trabalho com a resposta certa já conferida antes do teste. No mercado, chamam esse gabarito de golden set." tabindex="0">respuestas</span>. Solo que aquí el tribunal examinador eres tú: quien elabora la prueba es quien conoce el oficio, y nadie conoce tu oficio mejor que tú. La candidata es la IA.</p>
+<p>La clave de respuestas de esta lección tiene 5 preguntas. Cada una necesita dos cosas: ser una pregunta real de tu día a día (del tipo que haría un cliente o que tú mismo resuelves cada semana) y tener la respuesta correcta <em>escrita antes</em> antes de que le preguntes a la IA. El orden importa: quien lee primero la respuesta de la IA, bonita y segura, tiende a convencerse de que «parece correcta», y entonces la prueba ya nace contaminada. Respuesta correcta primero, en papel; pregúntale a la IA después.</p>
+<!-- exemplo-profissao -->
+<p>Una contadora armó el suyo en 15 minutos: el plazo para presentar una declaración, la tasa de un tramo del régimen simplificado, si cierto gasto es deducible, la fecha de vencimiento de un comprobante mensual y el límite de facturación de una categoría tributaria. Verificó las 5 respuestas en la tabla oficial antes de abrir la IA — porque un plazo o una tasa incorrectos no son una "respuesta fea": son una multa para la empresa de su cliente.</p>
+<p>Mezcla los niveles a propósito: tres preguntas comunes, una difícil y una tramposa, de esas con truco que solo alguien del área detecta. La pregunta tramposa revela si la IA sabe o si solo adorna.</p>
+<div class="quiz" data-answer="c">
+<p class="qk">Ponte a prueba</p><p class="q">¿Por qué hay que escribir la respuesta correcta de cada pregunta antes de preguntarle a la IA?</p>
+<button class="opt" data-k="a">Porque la IA responde mejor cuando quien pregunta ya domina el tema</button>
+<button class="opt" data-k="b">Para ahorrar tiempo, ya que así no hace falta revisar después</button>
+<button class="opt" data-fb="Exato: uma resposta fluente e confiante convence com facilidade. O gabarito prévio protege o seu julgamento de ser seduzido pela forma." data-k="c">Porque, después de leer una respuesta bien escrita, es fácil convencerse de que "parece correcto"</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">marcar como leído</button>
+</section>
+<!-- ============ STEP 3 ============ -->
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> La nota que basta es una decisión de negocio</h2>
+<p>Ejecutó las 5 preguntas y las calificó: acertó 4. ¿Eso es bueno o malo? Depende de una sola cosa: el costo de cada error. Y ese cálculo no es técnico: es comercial.</p>
+<!-- exemplo-profissao -->
+<p>Compara dos trabajos. Un agente inmobiliario usa la IA para escribir textos de anuncios: si 1 de cada 5 sale mal, la rehace en dos minutos y nadie sale perjudicado —4 de 5 ya le ahorra la tarde. La misma tasa en una contadora que responde sobre fechas límite de impuestos es inaceptable: la quinta respuesta equivocada es una multa con nombre y apellido. Misma nota, veredictos opuestos.</p>
+<p>Por eso la vara tiene dos niveles. Para las tareas en las que el error es barato y visible —texto promocional, borrador, primera versión de cualquier cosa—, una tasa alta de aciertos ya permite usarla, porque revisas una muestra. Para las tareas en las que el error es costoso o pasa inadvertido —número, plazo, cláusula, valor—, el estándar es otro: o la IA acierta todo el patrón de respuestas, o una persona revisa cada respuesta antes de que llegue al cliente. Y ese estándar lo acuerdas con el cliente, en voz alta, antes de empezar: "para este tipo de tarea, todo pasa por mí; para aquel, la IA responde directamente". Eso forma parte de la propuesta comercial, no es un detalle interno.</p>
+<p>Una última sinceridad: una puntuación perfecta en la clave de respuestas no significa perfección eterna. Significa "en los 5 casos que conozco y verifiqué, acierta". Es un piso de confianza, no un techo — y precisamente por ser un número honesto vale más, frente al cliente, que cualquier promesa.</p>
+<div class="qanchor"><p>Quien no tiene una respuesta modelo no tiene opinión: tiene una hinchada.</p></div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">marcar como leído</button>
+</section>
+<!-- ============ STEP 4 ============ -->
+<section class="step" data-fig="4" data-kind="fundamento">
+<h2><span class="n">04</span> ¿Puntuación baja? Mejora la solicitud antes de cambiar de herramienta</h2>
+<p>La reacción instintiva ante una nota baja es dictaminar que «esa IA es mala» y salir a buscar otra. Casi siempre es una conclusión equivocada. La causa más común de una respuesta mala no es la herramienta: es una solicitud vaga y la falta de contexto. Esas dos cosas las puedes corregir tú, en minutos y sin gastar dinero.</p>
+<p>El ciclo de mejora sigue un orden, de lo más barato a lo más caro. Primero, vuelve a leer las respuestas incorrectas: el error revela su propia causa. ¿La IA inventó algo porque faltaba material? ¿Entendió otra cosa porque la solicitud era ambigua? Segundo, mejora la solicitud: una instrucción más específica y una regla de seguridad como "si la información no está en el material, escribe 'no consta'". Tercero, aporta el contexto que faltaba: adjunta la tabla oficial, el contrato, la política de la oficina; el material del que debería salir la respuesta correcta. Cuarto, vuelve a ejecutar la clave. Las 5 preguntas, no solo la que salió mal: un ajuste que corrige la pregunta 3 puede arruinar la pregunta 5, y solo lo descubres al ejecutar todo de nuevo.</p>
+<!-- exemplo-profissao -->
+<p>Volviendo al abogado de la multa inventada: en vez de abandonar la herramienta, cambió la solicitud: «resume usando solo lo que está escrito en este contrato; lo que no esté en el texto, márcalo como 'no consta'»; luego pegó el contrato entero en la conversación. Repitió las 5 preguntas: 5 de 5. La herramienta era la misma; lo que había cambiado de calidad era la solicitud.</p>
+<p>Solo después de agotar las opciones de solicitud y contexto, si la puntuación sigue baja, es momento de probar otra herramienta, con la misma clave de respuestas para que la comparación sea válida. Y hay un último recurso del que vas a oír hablar: reeducar el modelo por dentro, con entrenamiento a medida. Es caro, poco común y casi nunca es el primer paso; para quien presta servicios, casi nunca es un paso. Las solicitudes y el contexto resuelven la gran mayoría de los casos.</p>
+<div class="quiz" data-answer="a">
+<p class="qk">Ponte a prueba</p><p class="q">Tu IA respondió mal 2 de las 5 preguntas de la clave de respuestas. ¿Cuál es el primer paso?</p>
+<button class="opt" data-fb="Isso: o erro aponta a causa, e pedido + contexto são os consertos mais baratos. Rodar as 5 de novo garante que o ajuste não quebrou o que já funcionava." data-k="a">Vuelve a leer las dos respuestas incorrectas, mejora la solicitud y el contexto, y ejecuta las 5 de nuevo</button>
+<button class="opt" data-k="b">Cambiar de herramienta de inmediato porque esta ya demostró ser débil</button>
+<button class="opt" data-k="c">Contratar una capacitación a medida para reeducar el modelo</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">marcar como leído</button>
+</section>
+<!-- ============ PRÁTICA ============ -->
+<section class="practice" data-mode="prompt" data-practice="p1">
+<p class="pk">Practica ahora <span class="pcount">0/3 hecho</span></p>
+<h3 class="ph">Prepara tu cuestionario de 5 preguntas y califica a la IA</h3>
+<p class="pgoal">Terminar con una nota del 0 al 5, registrada, que indique si esta IA está lista para tu cliente — ~12 min.</p>
+<p class="psafe">Nada de esto afecta tu trabajo real: es una conversación de prueba que puedes borrar cuando quieras. Si una respuesta te parece rara, mejor aún: anotar el error es exactamente el ejercicio.</p>
+<p>El bloque de abajo parece cosa de técnicos, pero solo es la consigna de la prueba que le entregas a la candidata: una nota con instrucciones que pegas en la conversación con la IA. Todo lo que está entre &lt; &gt; es lo que cambias por tu caso; el resto queda como está.</p>
+<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Vou fazer 5 perguntas do meu trabalho de &lt;sua profissão&gt;, uma por vez.
+Contexto: &lt;descreva em 1 ou 2 frases o que você faz e para quem&gt;.
+Responda de forma direta e objetiva.
+Se não tiver certeza de alguma informação, escreva "não tenho certeza"
+em vez de arriscar.
+
+Primeira pergunta: &lt;sua pergunta 1&gt;</pre></div>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Escribe las 5 preguntas de tu día a día y, junto a cada una, la respuesta correcta —verificada en tu fuente oficial (tabla, contrato, sistema) <em>antes</em> antes de abrir la IA. Mezcla: 3 comunes, 1 difícil, 1 engañosa.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Pega el bloque de arriba en la IA de chat y haz las 5 preguntas, una por una. Para cada respuesta, compárala con tu clave de respuestas y marca: correcta, incorrecta o parcialmente correcta.</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Suma la puntuación: cada respuesta correcta vale 1 punto, una respuesta medio correcta vale medio punto y una incorrecta vale cero. Anota "puntuación X de 5", con la fecha y el nombre de la herramienta. Está listo cuando tengas anotada una puntuación de 0 a 5.</label></li>
+</ol>
+<p class="pdone">Acabas de hacer lo que la mayoría de quienes venden servicios de IA nunca hizo: medir la herramienta con un número antes de mostrársela al cliente. Esa calificación es un argumento de venta y una protección — guárdala.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<!-- Fig 1 — DIAGRAMA: mesmo tom seguro, resultados opostos; só a conferência separa -->
+<div class="fig on" data-cap="&lt;b&gt;Fig. 1&lt;/b&gt; duas respostas, o mesmo tom seguro — sem conferir contra algo, é impossível saber qual das duas mente" data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="52" rx="8" stroke="var(--line2)" stroke-width="1.5" width="180" x="20" y="22"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="32" y="42">RESPUESTA A · tono: seguro</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="188" y1="54" y2="54"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="150" y1="63" y2="63"></line>
+<rect height="52" rx="8" stroke="var(--line2)" stroke-width="1.5" width="180" x="20" y="86"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="32" y="106">RESPUESTA B · tono: seguro</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="188" y1="118" y2="118"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="150" y1="127" y2="127"></line>
+<line stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5" x1="110" x2="110" y1="138" y2="158"></line>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="176">comprobada: A correcta</text>
+<text fill="var(--warm)" font-family="var(--mono)" font-size="10" x="24" y="190">comprobada: B incorrecta</text>
+</svg></div>
+<!-- Fig 2 — DIAGRAMA: mecanismo do gabarito -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 2&lt;/b&gt; a nota nasce da comparação com a resposta escrita antes — nunca da impressão de quem lê depois" data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="70" rx="8" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5" width="86" x="14" y="18"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="36">5 PREGUNTAS</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="50">+ RESPUESTAS</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="64">escritas antes</text>
+<rect height="70" rx="8" stroke="var(--line2)" stroke-width="1.5" width="76" x="130" y="18"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="48">RESPUESTAS</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="62">DE LA IA</text>
+<path d="M57 88 v22 h96 v-22" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M105 110 v20" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M101 126 l4 6 l4 -6" stroke="var(--accent)" stroke-linejoin="round" stroke-width="1.5"></path>
+<rect height="30" rx="8" stroke="var(--accent)" stroke-width="1.5" width="96" x="58" y="134"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="72" y="153">COMPARAR</text>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="11" x="80" y="186">nota: 4/5</text>
+</svg></div>
+<!-- Fig 3 — DIAGRAMA: régua da taxa de acerto por custo do erro -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 3&lt;/b&gt; a régua da nota aceitável é o custo do erro — a mesma taxa aprova a legenda e reprova o imposto" data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<line stroke="var(--line2)" stroke-width="2" x1="24" x2="196" y1="100" y2="100"></line>
+<line stroke="var(--line2)" stroke-width="2" x1="24" x2="24" y1="94" y2="106"></line>
+<line stroke="var(--line2)" stroke-width="2" x1="196" x2="196" y1="94" y2="106"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="122">0%</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="176" y="122">100%</text>
+<circle cx="138" cy="100" r="5" stroke="var(--accent)" stroke-width="1.5"></circle>
+<path d="M138 92 v-30" stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="72" y="46">texto del anuncio</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="94" y="58">~80% ya sirve</text>
+<circle cx="196" cy="100" fill="var(--accent)" r="5"></circle>
+<path d="M196 108 v30" stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="82" y="154">fecha límite de impuestos</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="52" y="166">100% o revisión humana</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="186">criterio = costo del error</text>
+</svg></div>
+<!-- Fig 4 — DIAGRAMA: ciclo de melhoria, do conserto barato ao caro -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 4&lt;/b&gt; o ciclo roda por dentro — pedido e contexto — antes de qualquer saída cara para fora dele" data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="28" rx="8" stroke="var(--warm)" stroke-width="1.5" width="100" x="60" y="14"></rect>
+<text fill="var(--warm)" font-family="var(--mono)" font-size="10" x="74" y="32">nota baja</text>
+<path d="M110 42 v14" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="58"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="75">1. releer los errores</text>
+<path d="M110 84 v10" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="96"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="113">2. mejorar el pedido</text>
+<path d="M110 122 v10" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="134"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="151">3. dar contexto</text>
+<path d="M42 147 h-16 v-119 h34" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"></path>
+<path d="M54 24 l6 4 l-6 4" fill="none" stroke="var(--accent)" stroke-linejoin="round" stroke-width="1.5"></path>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="30" y="180">4. ejecutar las 5 de nuevo</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="194">cambiar de herramienta: solo después</text>
+</svg></div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Resalta cualquier fragmento para convertirlo en una tarjeta de repaso.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-5 (motor injeta o resto depois) -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Resumen</p>
+<ul>
+<li>La IA mantiene el mismo tono de certeza cuando acierta y cuando se equivoca: el ojo por sí solo no distingue ambas cosas; la verificación sí.</li>
+<li>La clave de respuestas es la prueba que preparas: preguntas sobre tu oficio, con la respuesta verificada en la fuente oficial antes de la prueba.</li>
+<li>La tasa aceptable depende del costo de cada error y se acuerda con el cliente; no se decide a ciegas.</li>
+<li>Ante una calificación baja, primero vienen las soluciones baratas: una solicitud más clara y el contexto incluido; reeducar el modelo es un recurso caro y poco común, casi nunca la solución.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Tu siguiente paso</p>
+<p class="na-win">Acabas de medir una IA con un número — en lugar de cruzar los dedos para que funcione.</p>
+<p class="na-action">En los próximos 15 minutos: elige la tarea que piensas vender como servicio y escribe solo las 5 preguntas de su clave; mañana podrás verificar las respuestas con calma en la fuente oficial.</p>
+<p class="na-hook">En la próxima clase armarás el asistente con la memoria de tu negocio: el documento que hace que la IA responda como alguien que trabaja contigo desde hace años.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← ruta</a><a href="#aula-6">siguiente clase →</a></nav>
+<footer>Clase 5 · Cómo montar un negocio de servicios de IA · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — pergunta/decisão/contraste/diagnóstico/aplicação; nunca resumo do recap -->
+<script id="cards-5" type="application/json">
+[
+  {"front":"Por que uma resposta errada da IA é tão difícil de perceber só lendo?","back":"Porque ela vem no mesmo tom firme e bem escrito das respostas certas — não há hesitação para servir de alarme. Só comparar com um gabarito revela o erro."},
+  {"front":"Decisão: o cliente quer o serviço no ar amanhã, e a IA fez 3 de 5 no seu gabarito de prazos fiscais. Você entrega?","back":"Não direto: prazo fiscal errado vira multa. Ou você sobe a nota melhorando pedido e contexto antes de entregar, ou toda resposta passa por revisão humana — e isso fica combinado com o cliente."},
+  {"front":"Qual a diferença entre 80% de acerto numa legenda de anúncio e 80% num cálculo de imposto?","back":"O custo do erro. A legenda ruim se refaz em dois minutos; o imposto errado vira multa e cliente perdido. A mesma nota aprova um caso e reprova o outro."},
+  {"front":"Diagnóstico: você corrigiu a pergunta que a IA errava e testou só ela. Qual é o risco escondido?","back":"O ajuste pode ter quebrado outra pergunta que antes passava. A nota vale para o conjunto — rode sempre as 5 de novo depois de qualquer mudança."},
+  {"front":"Um colega decreta que 'essa IA é ruim' depois de uma resposta ruim. O que você propõe antes de trocar de ferramenta?","back":"Montar um gabarito de 5 perguntas e medir a taxa de acerto; depois melhorar o pedido e dar mais contexto, e medir de novo contra o mesmo gabarito. Trocar só se a nota continuar baixa."}
+]
+</script>
+<!--
+COMPLETUDE aula-5 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: gabarito de 5 perguntas + nota
+  [OK] why                .why após a promessa (1) — dor real: erro descoberto na frente do cliente
+  [OK] tempo              data-tempo="22min" no view (1); motor renderiza no cold-open
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: advogado, contadora, corretor+contadora, advogado)
+  [OK] apoio-visual       .fig diagrama legendada por step (4/4, data-fig 1–4, data-cap que ensina; sem .termdemo — nenhum comando real na aula)
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1, ~12 min, 3 tarefas)
+  [OK] psafe              .psafe dentro da prática (1)
+  [OK] pgoal-tempo        .pgoal com "~12 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho, síntese em 4 linhas ≤5 (1)
+  [OK] next-action        .next-action com microvitória + microação ≤15min + gancho aula 6 (1)
+  [OK] cards              <script id="cards-5"> com 5 cartões (1)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão / 5 frentes em forma pergunta-decisão-contraste-diagnóstico-aplicação / operação difere (recap afirma; cartões recuperam ou aplicam)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: 2 quiz data-fb presentes (step 2 resposta c, step 4 resposta a)
+-->
+</section>

@@ -1,0 +1,272 @@
+<section class="view" data-aula="6" data-tempo="22min" id="v-aula-6">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Course · Lesson 6</p>
+<h1>An assistant with the<br/><em>memory</em> your business</h1>
+<p class="promise">By the end of this lesson, you’ll write your business’s “intern manual”—the document that makes any AI assistant respond your way, to your standards, from the very first question.</p>
+<!-- tempo renderizado pelo motor logo após a promessa -->
+<p class="why">Every AI response is correct — and sounds like any company but yours. You correct it, adjust the tone, explain who you are; tomorrow, you explain it all again, because the next conversation starts from scratch. There's just one cause for all this rework — and it can be fixed with a page you write just once.</p>
+<p class="cue"><span class="arw">↓</span> role to study</p>
+</div>
+<!-- herofig: METÁFORA DO MUNDO REAL — caderno-manual aberto sobre a mesa, post-its e crachá de estagiário ao lado -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<line stroke="var(--line2)" stroke-width="1.5" x1="14" x2="286" y1="206" y2="206"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="2" x="42" y="40">BUSINESS MANUAL</text>
+<path d="M42 62 Q42 56 48 56 H136 Q142 58 142 64 V186 Q142 180 136 180 H48 Q42 180 42 186 Z" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M242 62 Q242 56 236 56 H148 Q142 58 142 64 V186 Q142 180 148 180 H236 Q242 180 242 186 Z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="142" x2="142" y1="64" y2="182"></line>
+<line stroke="var(--accent)" stroke-width="1.5" x1="56" x2="118" y1="80" y2="80"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="56" x2="128" y1="96" y2="96"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="56" x2="122" y1="110" y2="110"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="56" x2="128" y1="124" y2="124"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="56" y="152">tone · rules</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="158" x2="228" y1="96" y2="96"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="158" x2="222" y1="110" y2="110"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="158" x2="228" y1="124" y2="124"></line>
+<rect height="34" rx="2" stroke="var(--warm)" stroke-width="1.5" transform="rotate(4 213 77)" width="34" x="196" y="60"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="203" y="82">1x</text>
+<rect height="30" rx="2" stroke="var(--accent)" stroke-width="1.5" transform="rotate(-6 35 155)" width="30" x="20" y="140"></rect>
+<rect height="58" rx="5" stroke="var(--accent)" stroke-width="1.5" width="40" x="252" y="108"></rect>
+<rect height="8" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="266" y="100"></rect>
+<circle cx="272" cy="126" r="8" stroke="var(--line2)" stroke-width="1.5"></circle>
+<line stroke="var(--line2)" stroke-width="1.5" x1="260" x2="284" y1="144" y2="144"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="260" x2="278" y1="154" y2="154"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="236" y="196">intern</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="42" y="226">write once · valid every morning</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> The same new intern every day</h2>
+<p>Imagine your office hired a brilliant intern: they read quickly, write well, and never complain. But no one introduced them to the company. They don’t know what you sell, who you sell to, or how you speak with clients. And, for some strange reason, every morning they forget what they learned yesterday. The work is correct — and doesn’t sound like you. You’re the one who spends the morning explaining everything again.</p>
+<p>This intern is the chat AI the way most people use it. It answers with whatever it has <span class="gterm" data-def="Tudo o que a IA sabe sobre você e o seu negócio no momento em que escreve a resposta — o que você contou naquela conversa, e nada além disso." tabindex="0">context</span> — and in a newly opened conversation, it knows nothing about you. Without knowing who’s asking, it writes for the average person: polite, correct, generic. It’s not that the tool doesn’t care; it’s that nobody introduced you.</p>
+<!-- exemplo-profissao -->
+<p>A real estate agent asks for a description of a two-bedroom apartment she just took on. The result is an ad full of "an unmissable opportunity" and "high-end finishes"—exactly the exaggerations her agency bans. She rewrites the whole thing. The next day, a new property, a new conversation: the exaggerations are back, and she has to explain everything again. The problem isn’t what she asks for—it’s what AI doesn’t know about her.</p>
+<div class="quiz" data-answer="b">
+<p class="qk">Test yourself</p><p class="q">You ask AI for an email to a client, and the response is correct and polite—but sounds like it could come from any company. What’s the most likely diagnosis?</p>
+<button class="opt" data-k="a">The tool is weak — with a paid version, the text would come out in your style</button>
+<button class="opt" data-fb="Genérico é sintoma de contexto vazio, não de ferramenta fraca — antes de trocar de produto, faça a apresentação que ninguém fez." data-k="b">Missing context: it doesn’t know who you are, how you speak, or what you never do</button>
+<button class="opt" data-k="c">AI isn’t for client-facing text — that’s still manual work</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">mark as read</button>
+</section>
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> The intern's manual: one document, five parts</h2>
+<p>With a human intern, you know what you’d do: on the first day, you’d hand them a written page—who we are, how we speak, what we never do. It works even better with AI: it reads the page in a second and follows it for as long as the conversation lasts. This document is your business’s intern handbook, in five parts:</p>
+<ul>
+<li><b>Who I am and what I do.</b> Name, profession, and the service in one sentence—the line that makes the response stop aiming at the whole world and start aiming at you.</li>
+<li><b>My typical clients.</b> Who they are, what they ask for, what concerns them. That’s what keeps AI from treating a neighborhood shop like a multinational corporation.</li>
+<li><b>My tone.</b> How you actually write: friendly or direct, formal or informal, the words you use and the ones you avoid.</li>
+<li><b>Three rules about what never to do.</b> Short and specific — prohibitions matter more than praise for yourself.</li>
+<li><b>A response template.</b> A real text of yours, pasted in without editing. One real example teaches your style better than ten adjectives describing it.</li>
+</ul>
+<!-- exemplo-profissao -->
+<p>An administrative assistant replies to dozens of emails a day on behalf of management. Without a guide, every AI draft needed an overhaul: management doesn’t open with "Dear all," doesn’t promise a deadline without checking, and always closes by offering to help. She wrote the guide in an afternoon—with two real emails from management as examples—and the difference showed in the first reply: the draft arrived ready for review, not a rewrite.</p>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">mark as read</button>
+</section>
+<div class="qerr">
+<p class="qk">Common mistake</p>
+<p class="qerr-txt"><b>Writing a huge, vague manual instead of a short, concrete one.</b> Caught up in the excitement, the first version turns into ten pages of intentions — “excellent service,” “always communicate with empathy” — that don’t resolve anything in a real situation. A rule that doesn’t fit on a sticky note isn’t a rule; it’s a wish. Choose one page of actionable statements: “never promise a timeline without my confirmation” works; “strive for quality” is just decoration.</p>
+</div>
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> Repeated tasks become named recipes</h2>
+<p>The manual answers “who we are.” But your work has a second layer: tasks that come back every week, always with the same steps. For those, there's a trick that multiplies the manual's value—turning each repeated task into a <b>named recipe</b>: a short title, with the steps written once underneath. After that, you no longer describe the process. You just say the title — "summarize a meeting" — and the AI follows the steps you agreed on.</p>
+<p>It’s the same system as recipe cards in a professional kitchen: the chef doesn’t repeat the instructions for every order — they name the dish, and any cook can make it the same way because the card has the steps. Your recipe follows a fixed format: <b>task name → when to use it → steps in order → what the result should look like</b>. Write the recipes below the manual, in the same document—and start with the task that takes up the most of your week.</p>
+<!-- exemplo-profissao -->
+<p>The administrative assistant created the "meeting summary" recipe: decisions first, then owners and deadlines, no opinions, half a page at most. Now she pastes in the meeting notes, enters the recipe title, and the summary comes out in the format senior management expects — on Monday and the tenth time, identical.</p>
+<div class="qapply">
+<p class="qak">Apply it to your work—one named recipe for each routine</p>
+<ul>
+<li><b>Real estate agent:</b> recipe "new property description" — property details in the real estate agency’s standard order, no superlatives, ending with an invitation to visit. They paste in the property details, name the recipe, and the description comes out in the agency’s standard format.</li>
+<li><b>Administrative assistant:</b> recipe "reply to standard email" — management’s tone, confirmation of receipt, deadline only when already approved. The draft arrives ready for a read-through, not a rewrite.</li>
+<li><b>Accountant:</b> recipe "monthly document reminder" — a list of outstanding items in the firm’s tone, without sounding scolding, with the deadline highlighted. Thirty clients, the same format, no writing from scratch.</li>
+</ul>
+</div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">mark as read</button>
+</section>
+<section class="step" data-fig="4" data-kind="ferramenta" data-versao="jul/2026">
+<h2><span class="n">04</span> Where the manual lives today</h2>
+<p>The simplest way to use the manual works with any assistant: paste the text at the start of each new conversation—that's exactly what you'll do in this lesson's exercise. But the main assistants already let you add the manual permanently <b>permanent</b>: you record it once, and every new conversation already knows who you are.</p>
+<p>The names are current as of July 2026 — screens change, the principle doesn’t. In the <b>ChatGPT</b>, the manual becomes a standing instruction: a permanent note pinned to the intern’s desk that they reread before any task. In <b>Claude</b>, the manual is stored with a workspace for each topic: a folder with the manual stapled to the cover, which the intern opens before answering about that client. And professional tools like <b>Claude Code</b> take the idea further — an assistant that works directly with the files on your computer, with the manual and recipes stored alongside the work itself — the next step, for when your service grows.</p>
+<!-- exemplo-profissao -->
+<p>An accountant saved the guide as a permanent instruction in the tool she already used. The result: every new conversation already knows the firm serves neighborhood retailers, that she never promises a refund date, and that overdue notices should sound firm but cordial. The real estate agent from step 1 did the same—and property descriptions stopped coming out full of superlatives. Neither of them switched tools; both changed what the tool knew about them.</p>
+<p>One guarantee to take with you: the guide is text <b>your</b> — you switched assistants, copied the page, and pasted it into the new one. Your business’s memory goes with you.</p>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">mark as read</button>
+</section>
+<div class="qsteps">
+<p class="qk">The 5 parts of the manual, in this order</p>
+<ol>
+<li><b>Who I am and what I do</b> — name, profession, and your service in one sentence.</li>
+<li><b>My typical clients</b> — who they are, what they ask for, what concerns them.</li>
+<li><b>My tone</b> — how you really write, with the words you use and the ones you avoid.</li>
+<li><b>Three rules about what never to do</b> — short and concrete; each one fits on a sticky note.</li>
+<li><b>A response template</b> — a real piece of your writing, pasted in without editing.</li>
+</ol>
+</div>
+<section class="practice" data-mode="prompt" data-practice="p1">
+<p class="pk">Practice now <span class="pcount">0/3 done</span></p>
+<h3 class="ph">Write the first version of your manual—and prove that it works</h3>
+<p class="pgoal">The same work question, asked with and without the manual, side by side — the version with the manual matches your tone and follows your rules. ~12 min.</p>
+<p class="psafe">Nothing here touches your old conversations or any files—the manual is just text pasted into a new conversation. If the answer comes out strange, close the conversation, adjust one line in the manual, and paste it again; nothing gets lost.</p>
+<p>The block below looks long, but it’s just a text form: each line in uppercase is a question, and each section between &lt; &gt; is where you enter your content—the rest stays as is.</p>
+<div class="pcodewrap"><button class="pcopy" type="button">copy</button><pre class="pcode">Este é o manual do meu negócio. Leia antes de responder e siga-o em todas as respostas desta conversa.
+
+QUEM SOU E O QUE FAÇO: &lt;nome, profissão e o serviço em 1 frase&gt;
+MEUS CLIENTES TÍPICOS: &lt;quem são, o que pedem, o que os preocupa&gt;
+MEU TOM: &lt;como você escreve — ex.: cordial e direto, sem gíria, frases curtas&gt;
+NUNCA FAZER:
+1. &lt;regra curta e concreta — ex.: nunca prometer prazo sem eu confirmar&gt;
+2. &lt;segunda regra&gt;
+3. &lt;terceira regra&gt;
+MODELO DE RESPOSTA — siga este formato:
+&lt;cole aqui, sem editar, uma resposta real que você escreveu e considera boa&gt;
+
+Antes de qualquer coisa, me diga em 2 linhas o que você entendeu do meu negócio.</pre></div>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Fill in all 5 parts, replacing each section between &lt; &gt; with your own content. Keep the rules short: if one won’t fit on a sticky note, shorten it until it does.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Start a new conversation in your chat AI, paste the complete manual, and read the 2-line summary it returns. If it got anything wrong, adjust that part of the manual and paste it again.</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Ask the same work-related question in two conversations—one with the manual pasted in, the other without—and compare them side by side. It’s ready when the answer with the manual uses your tone and cites at least one of your rules.</label></li>
+</ol>
+<p class="pdone">You’ve just written your business’s memory—the document that makes any assistant respond in your style from the very first question.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Sem manual, a memória zera a cada conversa: dia 1, dia 2 e dia 3 começam no mesmo ponto — e quem re-explica, toda vez, é você." data-fig="1">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="42" rx="6" stroke="var(--line2)" stroke-width="1.5" width="108" x="14" y="16"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="34">DAY 1 · conversation</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="49">memory: 0</text>
+<rect height="42" rx="6" stroke="var(--line2)" stroke-width="1.5" width="108" x="14" y="72"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="90">DAY 2 · conversation</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="105">memory: 0</text>
+<rect height="42" rx="6" stroke="var(--line2)" stroke-width="1.5" width="108" x="14" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="146">DAY 3 · conversation</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="161">memory: 0</text>
+<rect height="42" rx="6" stroke="var(--warm)" stroke-width="1.5" width="56" x="152" y="72"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="160" y="90">YOU</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="160" y="105">explains</text>
+<path d="M152 84 C138 70, 132 52, 122 40" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M128 46 l-6 -6 8 -2" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M152 93 h-30" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M128 88 l-6 5 6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M152 102 C138 116, 132 134, 122 146" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M128 140 l-6 6 8 2" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="190">the same explanation, 3 times</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; O mesmo pedido, dois caminhos: sem manual, a resposta sai para a média; com o manual lido antes, sai no seu tom e sob as suas regras." data-fig="2">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="30" rx="6" stroke="var(--line2)" stroke-width="1.5" width="96" x="62" y="10"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="72" y="29">same request</text>
+<path d="M92 40 C70 56, 58 70, 54 84" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M128 40 C150 56, 162 70, 166 84" stroke="var(--accent)" stroke-width="1.5"></path>
+<rect height="34" rx="6" stroke="var(--accent)" stroke-width="1.5" width="74" x="130" y="86"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="101">MANUAL</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="114">read first</text>
+<path d="M167 120 v22" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M162 134 l5 8 5 -8" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M53 84 v58" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M48 134 l5 8 5 -8" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="34" rx="6" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5" width="86" x="16" y="146"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="161">average response</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="174">everyone's</text>
+<rect height="34" rx="6" stroke="var(--warm)" stroke-width="1.5" width="86" x="122" y="146"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="132" y="161">in your tone,</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="132" y="174">your rules</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; A receita com nome: os passos são escritos uma vez; depois, o título curto chama tudo — e o resultado sai igual toda semana." data-fig="3">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="28" rx="14" stroke="var(--accent)" stroke-width="1.5" width="140" x="40" y="12"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="30">"meeting summary"</text>
+<path d="M110 40 v16" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M105 50 l5 8 5 -8" stroke="var(--accent)" stroke-width="1.5"></path>
+<rect height="72" rx="6" stroke="var(--line2)" stroke-width="1.5" width="152" x="34" y="60"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="46" y="80">1 decisions first</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="46" y="98">2 responsible parties + deadlines</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="46" y="116">3 no opinions · ½ page</text>
+<path d="M110 132 v16" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M105 142 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="30" rx="6" stroke="var(--warm)" stroke-width="1.5" width="96" x="62" y="152"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="74" y="171">same result</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="34" y="196">steps: written once</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Três moradas para o mesmo manual: colado a cada conversa, salvo de forma permanente, ou junto dos arquivos de trabalho — quanto mais acima, menos você repete." data-fig="4">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="36" rx="6" stroke="var(--line2)" stroke-width="1.5" width="192" x="14" y="140"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="156">paste into every conversation</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="169">works · depends on remembering</text>
+<rect height="36" rx="6" stroke="var(--accent)" stroke-width="1.5" width="176" x="30" y="82"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="98">saved in the assistant</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="111">permanent · every conversation knows</text>
+<rect height="36" rx="6" stroke="var(--warm)" stroke-dasharray="5 4" stroke-width="1.5" width="160" x="46" y="24"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="58" y="40">alongside the files</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="58" y="53">professional · next step</text>
+<path d="M20 132 v-40" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M15 100 l5 -8 5 8" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M36 74 v-40" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M31 42 l5 -8 5 8" stroke="var(--line2)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="194">the text is the same — and it’s yours</text>
+</svg>
+</div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Highlight any passage to turn it into a review card.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-6 -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Summary</p>
+<ul>
+<li>Without context, every conversation is the first day of an intern no one has introduced to the company: capable, correct—and generic.</li>
+<li>The intern's manual brings everything together in one short, concrete document: who you are, your clients, your tone, what never to do, and a real example.</li>
+<li>A task that repeats deserves a named recipe: write the steps once, then call it by title.</li>
+<li>The manual works best when it lives permanently inside the assistant—and the main assistants already support that today.</li>
+<li>Screens and products change; the manual is your text, and it goes with you to any assistant.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Your next step</p>
+<p class="na-win">You’ve just gotten what separates people who use AI from people who work with AI: an assistant that responds in your style from the very first question.</p>
+<p class="na-action">Over the next 15 minutes, save the manual somewhere you can find it without thinking—a pinned note on your phone—and paste it at the start of your next real work conversation. If your assistant supports permanent instructions, save it there.</p>
+<p class="na-hook">In the next lesson, you’ll meet agents that work while you sleep — and face the question that matters: how much autonomy to give them, and where the stop button goes.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← track</a><a href="#aula-7">next lesson →</a></nav>
+<footer>Lesson 6 · How to Build an AI Services Business · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — nunca resumo do recap acima -->
+<script id="cards-6" type="application/json">
+[
+  {"front":"Sua sócia desiste: 'essa IA só devolve texto genérico, vamos trocar de ferramenta'. Qual é a sua contraproposta, e por quê?","back":"Antes de trocar, escrever o manual e colar no início da conversa. Genérico quase sempre é apresentação que faltou, não limite da ferramenta — trocando de produto sem manual, o texto genérico muda de endereço e continua igual."},
+  {"front":"Uma assistente administrativa reescreve todo rascunho que a IA faz para os e-mails da diretoria. O que ela escreve primeiro, e o que vira nome chamável depois?","back":"Primeiro o manual: tom da chefia, três proibições e um e-mail verdadeiro como modelo. Depois a receita 'responder e-mail padrão' — ela cola o e-mail recebido, diz o título, e o rascunho já chega pronto para uma revisão rápida."},
+  {"front":"Colar o manual em cada conversa nova ou deixá-lo salvo dentro do assistente: o que muda entre os dois no dia a dia?","back":"Colado funciona, mas depende de você lembrar toda vez. Salvo de modo permanente, cada conversa já nasce sabendo do negócio — e, como o documento é seu, mudar de assistente é copiar e colar a mesma página."}
+]
+</script>
+<!--
+COMPLETUDE aula-6 | tipo=FERRAMENTA | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: manual escrito + mesma pergunta comparada com/sem
+  [OK] why                .why após a promessa (1) — dor real: re-explicar o negócio todo dia, resposta genérica
+  [OK] tempo              data-tempo="22min" no view (1); ~1.9k palavras + prática ~12min + 1 quiz, arredondado p/ cima
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: corretora, assistente adm, assistente adm, contadora+corretora)
+  [OK] apoio-visual       figura diagrama-de-mecanismo legendada por step (4/4 data-fig, data-cap que ensina) + mobfig 1–4
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1), com rampa de acesso antes do bloco colável
+  [OK] psafe              .psafe dentro da prática (1) — nada mexe em conversas antigas nem arquivos; fechar/ajustar/colar de novo
+  [OK] pgoal-tempo        .pgoal com "~12 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho (1) — 5 <li> afirmativos, síntese, zero pergunta
+  [OK] next-action        .next-action no fecho (1) — microvitória nomeada + microação 15min + gancho aula 7 (autonomia + botão de parar)
+  [OK] cards              <script id="cards-6"> presente (3 cartões: decisão, aplicação, contraste)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão; 0 frentes-afirmação; operação difere (recap afirma, cartões decidem/aplicam/contrastam)
+  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigação não se aplica); teste-se opcional presente (1 pergunta)
+Dosagem FERRAMENTA pool=5: qerr(1, obrig.) + qsteps(1, obrig.) + quiz(1, opc.) + cartões(3, opc.) + qapply(1, opc., 3 profissões nomeadas). Quadros espaçados: quiz no s1, qerr standalone após s2, qapply no s3, qsteps standalone após s4 (ponte p/ prática) — nunca 2 dentro de steps adjacentes. Jargão do roteiro-fonte (workspace, subagent, MCP, markdown, arquivo de configuração, repositório, terminal) eliminado e traduzido: manual do estagiário / receitas com nome / "assistente que trabalha direto nos arquivos do seu computador". 1 menção de produto técnico com carimbo (Claude Code, jul/2026, s4 data-versao). .gterm: contexto (s1). Decisão de registro: SEM .termdemo nesta aula — não há comando real a demonstrar; todos os slots de figura usam diagrama-de-mecanismo. Zero emoji, zero exclamação dupla nos fechos.
+-->
+</section>

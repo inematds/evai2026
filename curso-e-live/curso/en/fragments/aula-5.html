@@ -1,0 +1,265 @@
+<!-- ===== AULA 5 — Confiar ou conferir? Teste antes do cliente (tipo FUNDAMENTO) ===== -->
+<!-- Decisão de figura: SEM .termdemo nesta aula — nenhum step tem comando real a demonstrar;
+     todos os 4 slots da rail usam .fig de diagrama-de-mecanismo, conforme SKILL.md §termdemo. -->
+<section class="view" data-aula="5" data-tempo="22min" id="v-aula-5">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Course · Lesson 5</p>
+<h1>Trust or <em>check?</em><br/>Test before the client</h1>
+<p class="promise">By the end of this lesson, you’ll create an answer key with 5 questions from your own work and test an AI against it—knowing how to tell, with a number, whether it’s ready for your client.</p>
+<p class="why">AI answers incorrectly with the same air of certainty as when it answers correctly. Anyone delivering a service without testing it discovers the error in the worst possible way: in front of the client, after charging them. A simple test beforehand replaces "I think it works" with "it worked in 4 out of 5 cases — and I know exactly which one is the fifth."</p>
+<p class="cue"><span class="arw">↓</span> role to study</p>
+</div>
+<!-- herofig: METÁFORA — folha de prova sendo corrigida com o gabarito ao lado (nunca robô/cérebro) -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<!-- folha de prova -->
+<rect height="186" rx="8" stroke="var(--line2)" stroke-width="1.5" width="136" x="36" y="26"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="2" x="50" y="48">PROOF</text>
+<!-- 5 questões: número + linha de resposta + marcação -->
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="74">1.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="71" y2="71"></line>
+<path d="M148 66 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="102">2.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="99" y2="99"></line>
+<path d="M148 94 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="130">3.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="127" y2="127"></line>
+<path d="M147 121 l10 10 M157 121 l-10 10" stroke="var(--warm)" stroke-linecap="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="158">4.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="155" y2="155"></line>
+<path d="M148 150 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="50" y="186">5.</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="64" x2="140" y1="183" y2="183"></line>
+<path d="M148 178 l4 5 l7 -9" stroke="var(--accent)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+<!-- gabarito ao lado -->
+<rect height="112" rx="6" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5" width="76" x="192" y="58"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" letter-spacing="1.5" x="202" y="76">ANSWER KEY</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="90" y2="90"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="106" y2="106"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="122" y2="122"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="138" y2="138"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="202" x2="256" y1="154" y2="154"></line>
+<!-- caneta corrigindo, apoiada sobre a questão errada -->
+<g transform="rotate(38 196 128)">
+<rect height="11" rx="5" stroke="var(--ink-soft)" stroke-width="1.5" width="58" x="190" y="122"></rect>
+<path d="M190 122 l-12 5.5 l12 5.5 z" stroke="var(--ink-soft)" stroke-linejoin="round" stroke-width="1.5"></path>
+<line stroke="var(--ink-soft)" stroke-width="1.5" x1="248" x2="248" y1="122" y2="133"></line>
+</g>
+<!-- nota final -->
+<text fill="var(--accent)" font-family="var(--mono)" font-size="11" x="192" y="196">score: 4/5</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<!-- ============ STEP 1 ============ -->
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> AI makes mistakes with the same confidence it gets things right</h2>
+<p>An employee who doesn’t know an answer will often hesitate: "I think that’s right, let me check." That hesitation is an alarm—and you’ve learned to hear it your whole life. AI never hesitates. It delivers the wrong answer in the same confident, polished, organized tone as the right one. There’s no alarm. That’s why you can’t catch the error by eye alone: you’re trained to distrust hesitation, and there’s no hesitation here.</p>
+<p>Anyone who sells an AI service without testing it is betting that the errors will happen far from the client. They won’t. They show up right in the deliverable—in the document the client reads, in the number they pass along—and then the problem stops being the tool’s and becomes yours, with your name on the invoice.</p>
+<!-- exemplo-profissao -->
+<p>A lawyer asked AI for a summary of a lease. The summary was impeccable: well organized, clear language, and it cited an early termination penalty "equal to three months' rent." But that clause doesn't exist in that lease — the AI filled in a market standard, in the same confident tone as everything else. Anyone who trusts the summary brings a made-up clause to the client meeting.</p>
+<p>There’s a simple name for the defense of anyone doing serious work with this: error review. Before giving your opinion on whether AI "does well" at a task, read about 20 of its actual responses to that task, one by one, noting anything that bothers you — even if you can’t name the problem yet. An opinion without this review isn’t an evaluation: it’s an impression. And impressions are what fall apart in front of a client.</p>
+<div class="qbefore-after">
+<div class="qba-col qba-before">
+<p class="qba-lbl">Before—delivery without testing</p>
+<p class="qba-txt">"I ran it twice, it looked good, so I sent it." The client discovers the error, the rework is free, and trust in the service starts out cracked.</p>
+</div>
+<div class="qba-col qba-depois">
+<p class="qba-lbl">After — graded deliverable with answer key</p>
+<p class="qba-txt">"I tested it on 5 real cases: it got 4 right. This is the case it gets wrong, and I review it before it goes out." A known, controlled, billable error.</p>
+</div>
+<p class="qba-saldo"><b>Balance:</b> ~15 minutes of testing turn an impression into a number (4 out of 5)—you catch the error before delivery, not the client afterward.</p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">mark as read</button>
+</section>
+<!-- ============ STEP 2 ============ -->
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> The answer key: questions whose answers you already know</h2>
+<p>How do you test without becoming hostage to your own impression? The same way you grade a competitive exam: with an <span class="gterm" data-def="Conjunto pequeno de perguntas do seu trabalho com a resposta certa já conferida antes do teste. No mercado, chamam esse gabarito de golden set." tabindex="0">answer key</span>. But here, you’re the examining board—the person who writes the test is the one who knows the trade, and nobody knows your trade better than you do. The candidate is the AI.</p>
+<p>The answer key for this lesson has 5 questions. Each one needs two things: to be a real question from your day-to-day work (the kind a client would ask, or one you answer every week yourself) and to have the right answer <em>written beforehand</em> before you ask the AI. The order matters: whoever reads the AI's polished, confident answer first tends to be convinced that it "looks right"—and then the test is already compromised. Write down the correct answer first; ask the AI afterward.</p>
+<!-- exemplo-profissao -->
+<p>An accountant put hers together in 15 minutes: the filing deadline for a tax return, the rate for a bracket in the simplified tax regime, whether a particular expense is deductible, the due date for a monthly payment slip, and the revenue cap for a tax classification. She checked all 5 answers against the official table before opening AI—because a wrong deadline or rate isn’t an "ugly answer": it’s a fine against her client’s company tax ID.</p>
+<p>Intentionally mix the difficulty levels: three common questions, one difficult one, and one tricky one — the kind with a gotcha that only someone in the field would notice. The tricky one reveals whether the AI knows its stuff or just makes things up.</p>
+<div class="quiz" data-answer="c">
+<p class="qk">Test yourself</p><p class="q">Why does the correct answer to each question need to be written down before you ask the AI?</p>
+<button class="opt" data-k="a">Because AI gives better answers when the person asking already knows the subject</button>
+<button class="opt" data-k="b">To save time, since that way there’s no need to check afterward</button>
+<button class="opt" data-fb="Exato: uma resposta fluente e confiante convence com facilidade. O gabarito prévio protege o seu julgamento de ser seduzido pela forma." data-k="c">Because after reading a well-written answer, it’s easy to convince yourself that it "seems right"</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">mark as read</button>
+</section>
+<!-- ============ STEP 3 ============ -->
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> The score that’s enough is a business decision</h2>
+<p>You ran the 5 questions and scored them: you got 4 right. Is that good or bad? It depends on one thing—the cost of each mistake. And that’s not a technical calculation; it’s a business one.</p>
+<!-- exemplo-profissao -->
+<p>Compare two jobs. A real estate agent uses AI to write listing captions: if 1 out of 5 is bad, they redo that one in two minutes and no one gets hurt—4 out of 5 already saves them an afternoon. The same rate for an accountant answering tax deadline questions is unacceptable: the fifth wrong answer means a fine with their name on it. Same score, opposite verdicts.</p>
+<p>That’s why the benchmark has two levels. For tasks where mistakes are cheap and visible — promotional copy, a draft, a first version of anything — a high accuracy rate is enough to allow use, because you review samples. For tasks where mistakes are costly or silent — a number, deadline, clause, amount — the standard is different: either the AI gets the entire answer key right, or every response it gives gets human review before reaching the client. And you agree on that standard with the client, out loud, before you start: "for this type of task, everything goes through me; for that one, the AI replies directly." That’s a sales proposal, not a behind-the-scenes detail.</p>
+<p>One final note: a perfect score on the answer key doesn’t mean eternal perfection. It means "in the 5 cases I know and checked, it gets them right." It’s a confidence floor, not a ceiling—and precisely because it’s an honest number, it’s worth more in front of the client than any promise.</p>
+<div class="qanchor"><p>Without an answer key, you don’t have an opinion—you’re just rooting for a side.</p></div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">mark as read</button>
+</section>
+<!-- ============ STEP 4 ============ -->
+<section class="step" data-fig="4" data-kind="fundamento">
+<h2><span class="n">04</span> Low score? Improve the prompt before switching tools</h2>
+<p>The instinctive reaction to a low score is to declare "this AI is bad" and start looking for another one. That’s almost always the wrong conclusion. The most common cause of a bad response isn’t the tool: it’s a vague request and a lack of context — and those are two fixes you can make in minutes, at no cost.</p>
+<p>The improvement cycle follows an order, from least expensive to most expensive. First, review the wrong answers: the error tells you its own cause. Did the AI make something up because it lacked source material? Did it misunderstand because the prompt was ambiguous? Second, improve the prompt—make the instruction more specific, and add a safety rule like "if the information isn’t in the source material, write 'not included'." Third, provide the missing context: include the official table, contract, or office policy—the material the correct answer should come from. Fourth, run the answer key again. All 5 questions, not just the one it got wrong: a change that fixes question 3 can break question 5, and you’ll only find out by running the whole thing.</p>
+<!-- exemplo-profissao -->
+<p>Back to the lawyer and the made-up fine: instead of abandoning the tool, he changed the prompt—“summarize using only what’s written in this contract; mark anything that isn’t in the text as ‘not included’”—and pasted the entire contract into the conversation. He ran the 5 questions again: 5 out of 5. The tool was the same; the prompt was what had improved.</p>
+<p>Only after you've exhausted prompts and context, and the score is still low, is it time to test another tool — against the same answer key, so the comparison is valid. There's one last resort you'll hear about: retraining the model internally with custom training. It's expensive, rare, and almost never the first step — for service providers, it's almost never a step at all. Prompts and context solve the vast majority of cases.</p>
+<div class="quiz" data-answer="a">
+<p class="qk">Test yourself</p><p class="q">Your AI got 2 of the 5 answer key questions wrong. What's the first move?</p>
+<button class="opt" data-fb="Isso: o erro aponta a causa, e pedido + contexto são os consertos mais baratos. Rodar as 5 de novo garante que o ajuste não quebrou o que já funcionava." data-k="a">Reread the two incorrect answers, improve the prompt and context, and run all 5 again</button>
+<button class="opt" data-k="b">Immediately switch tools because this one has already proved weak</button>
+<button class="opt" data-k="c">Hire a custom training program to retrain the model</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">mark as read</button>
+</section>
+<!-- ============ PRÁTICA ============ -->
+<section class="practice" data-mode="prompt" data-practice="p1">
+<p class="pk">Practice now <span class="pcount">0/3 done</span></p>
+<h3 class="ph">Create your answer key of 5 questions and score the AI</h3>
+<p class="pgoal">Leave with a written score from 0 to 5 indicating whether this AI is ready for your client — ~12 min.</p>
+<p class="psafe">Nothing here affects your actual work: this is a test conversation that you can delete whenever you want. If an answer seems strange, even better—writing down the error is exactly the exercise.</p>
+<p>The block below looks technical, but it’s just the test prompt you give the candidate—a note of instructions that you paste into the AI conversation. Everything between &lt; &gt; is what you replace with your case; the rest stays as is.</p>
+<div class="pcodewrap"><button class="pcopy" type="button">copy</button><pre class="pcode">Vou fazer 5 perguntas do meu trabalho de &lt;sua profissão&gt;, uma por vez.
+Contexto: &lt;descreva em 1 ou 2 frases o que você faz e para quem&gt;.
+Responda de forma direta e objetiva.
+Se não tiver certeza de alguma informação, escreva "não tenho certeza"
+em vez de arriscar.
+
+Primeira pergunta: &lt;sua pergunta 1&gt;</pre></div>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Write down the 5 questions from your daily work and, next to each one, the correct answer—verified against your official source (table, contract, system) <em>before</em> before opening the AI. Mix them up: 3 common, 1 difficult, 1 tricky.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Paste the block above into the chat AI and ask the 5 questions, one at a time. For each answer, compare it with your answer key and mark it: correct, incorrect, or partly correct.</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Add up the score: correct is 1 point, partially correct is half a point, and incorrect is zero. Write down "score X out of 5," with the date and the tool's name. Done when: you have a score from 0 to 5 written down.</label></li>
+</ol>
+<p class="pdone">You’ve just done what most people selling AI services have never done: measured the tool with a number before the client did. That score is a sales argument and protection—keep it.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<!-- Fig 1 — DIAGRAMA: mesmo tom seguro, resultados opostos; só a conferência separa -->
+<div class="fig on" data-cap="&lt;b&gt;Fig. 1&lt;/b&gt; duas respostas, o mesmo tom seguro — sem conferir contra algo, é impossível saber qual das duas mente" data-fig="1"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="52" rx="8" stroke="var(--line2)" stroke-width="1.5" width="180" x="20" y="22"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="32" y="42">RESPONSE A · tone: confident</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="188" y1="54" y2="54"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="150" y1="63" y2="63"></line>
+<rect height="52" rx="8" stroke="var(--line2)" stroke-width="1.5" width="180" x="20" y="86"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="32" y="106">RESPONSE B · tone: confident</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="188" y1="118" y2="118"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="32" x2="150" y1="127" y2="127"></line>
+<line stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5" x1="110" x2="110" y1="138" y2="158"></line>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="176">checked: A correct</text>
+<text fill="var(--warm)" font-family="var(--mono)" font-size="10" x="24" y="190">checked: B wrong</text>
+</svg></div>
+<!-- Fig 2 — DIAGRAMA: mecanismo do gabarito -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 2&lt;/b&gt; a nota nasce da comparação com a resposta escrita antes — nunca da impressão de quem lê depois" data-fig="2"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="70" rx="8" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5" width="86" x="14" y="18"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="36">5 QUESTIONS</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="24" y="50">+ ANSWERS</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="64">written beforehand</text>
+<rect height="70" rx="8" stroke="var(--line2)" stroke-width="1.5" width="76" x="130" y="18"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="48">RESPONSES</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="62">OF AI</text>
+<path d="M57 88 v22 h96 v-22" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M105 110 v20" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M101 126 l4 6 l4 -6" stroke="var(--accent)" stroke-linejoin="round" stroke-width="1.5"></path>
+<rect height="30" rx="8" stroke="var(--accent)" stroke-width="1.5" width="96" x="58" y="134"></rect>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="72" y="153">COMPARE</text>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="11" x="80" y="186">score: 4/5</text>
+</svg></div>
+<!-- Fig 3 — DIAGRAMA: régua da taxa de acerto por custo do erro -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 3&lt;/b&gt; a régua da nota aceitável é o custo do erro — a mesma taxa aprova a legenda e reprova o imposto" data-fig="3"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<line stroke="var(--line2)" stroke-width="2" x1="24" x2="196" y1="100" y2="100"></line>
+<line stroke="var(--line2)" stroke-width="2" x1="24" x2="24" y1="94" y2="106"></line>
+<line stroke="var(--line2)" stroke-width="2" x1="196" x2="196" y1="94" y2="106"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="122">0%</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="176" y="122">100%</text>
+<circle cx="138" cy="100" r="5" stroke="var(--accent)" stroke-width="1.5"></circle>
+<path d="M138 92 v-30" stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="72" y="46">ad caption</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="94" y="58">~80% is already good enough</text>
+<circle cx="196" cy="100" fill="var(--accent)" r="5"></circle>
+<path d="M196 108 v30" stroke="var(--accent)" stroke-dasharray="3 3" stroke-width="1.5"></path>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="82" y="154">tax deadline</text>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="52" y="166">100% or human review</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="186">yardstick = cost of the error</text>
+</svg></div>
+<!-- Fig 4 — DIAGRAMA: ciclo de melhoria, do conserto barato ao caro -->
+<div class="fig" data-cap="&lt;b&gt;Fig. 4&lt;/b&gt; o ciclo roda por dentro — pedido e contexto — antes de qualquer saída cara para fora dele" data-fig="4"><svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="28" rx="8" stroke="var(--warm)" stroke-width="1.5" width="100" x="60" y="14"></rect>
+<text fill="var(--warm)" font-family="var(--mono)" font-size="10" x="74" y="32">low score</text>
+<path d="M110 42 v14" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="58"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="75">1. review the errors</text>
+<path d="M110 84 v10" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="96"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="113">2. improve the prompt</text>
+<path d="M110 122 v10" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="26" rx="8" stroke="var(--accent)" stroke-width="1.5" width="136" x="42" y="134"></rect>
+<text fill="var(--ink-soft)" font-family="var(--mono)" font-size="10" x="54" y="151">3. provide context</text>
+<path d="M42 147 h-16 v-119 h34" stroke="var(--accent)" stroke-dasharray="4 3" stroke-width="1.5"></path>
+<path d="M54 24 l6 4 l-6 4" fill="none" stroke="var(--accent)" stroke-linejoin="round" stroke-width="1.5"></path>
+<text fill="var(--accent)" font-family="var(--mono)" font-size="10" x="30" y="180">4. run the 5 again</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="194">switch tools: only later</text>
+</svg></div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Highlight any passage to turn it into a review card.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-5 (motor injeta o resto depois) -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Summary</p>
+<ul>
+<li>AI sounds just as certain when it’s right as when it’s wrong — you can’t tell the difference by eye alone; verification is what separates them.</li>
+<li>The answer key is the evidence you prepare: questions from your field, with answers checked against the official source before the test.</li>
+<li>The acceptable rate depends on the cost of each error, and is agreed on with the client — not decided in the dark.</li>
+<li>When the score is low, try the cheap fixes first: a clearer request and added context; retraining the model is expensive and rare, and almost never the right move.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Your next step</p>
+<p class="na-win">You’ve just measured an AI with a number—instead of crossing your fingers.</p>
+<p class="na-action">Over the next 15 minutes: choose the task you plan to sell as a service and write down only its 5 answer-key questions—you can check the answers tomorrow, calmly, against the official source.</p>
+<p class="na-hook">In the next lesson, you’ll build an assistant with your business’s memory—the document that helps the AI respond like someone who’s worked with you for years.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← track</a><a href="#aula-6">next lesson →</a></nav>
+<footer>Lesson 5 · How to Build an AI Services Business · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — pergunta/decisão/contraste/diagnóstico/aplicação; nunca resumo do recap -->
+<script id="cards-5" type="application/json">
+[
+  {"front":"Por que uma resposta errada da IA é tão difícil de perceber só lendo?","back":"Porque ela vem no mesmo tom firme e bem escrito das respostas certas — não há hesitação para servir de alarme. Só comparar com um gabarito revela o erro."},
+  {"front":"Decisão: o cliente quer o serviço no ar amanhã, e a IA fez 3 de 5 no seu gabarito de prazos fiscais. Você entrega?","back":"Não direto: prazo fiscal errado vira multa. Ou você sobe a nota melhorando pedido e contexto antes de entregar, ou toda resposta passa por revisão humana — e isso fica combinado com o cliente."},
+  {"front":"Qual a diferença entre 80% de acerto numa legenda de anúncio e 80% num cálculo de imposto?","back":"O custo do erro. A legenda ruim se refaz em dois minutos; o imposto errado vira multa e cliente perdido. A mesma nota aprova um caso e reprova o outro."},
+  {"front":"Diagnóstico: você corrigiu a pergunta que a IA errava e testou só ela. Qual é o risco escondido?","back":"O ajuste pode ter quebrado outra pergunta que antes passava. A nota vale para o conjunto — rode sempre as 5 de novo depois de qualquer mudança."},
+  {"front":"Um colega decreta que 'essa IA é ruim' depois de uma resposta ruim. O que você propõe antes de trocar de ferramenta?","back":"Montar um gabarito de 5 perguntas e medir a taxa de acerto; depois melhorar o pedido e dar mais contexto, e medir de novo contra o mesmo gabarito. Trocar só se a nota continuar baixa."}
+]
+</script>
+<!--
+COMPLETUDE aula-5 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: gabarito de 5 perguntas + nota
+  [OK] why                .why após a promessa (1) — dor real: erro descoberto na frente do cliente
+  [OK] tempo              data-tempo="22min" no view (1); motor renderiza no cold-open
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: advogado, contadora, corretor+contadora, advogado)
+  [OK] apoio-visual       .fig diagrama legendada por step (4/4, data-fig 1–4, data-cap que ensina; sem .termdemo — nenhum comando real na aula)
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1, ~12 min, 3 tarefas)
+  [OK] psafe              .psafe dentro da prática (1)
+  [OK] pgoal-tempo        .pgoal com "~12 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho, síntese em 4 linhas ≤5 (1)
+  [OK] next-action        .next-action com microvitória + microação ≤15min + gancho aula 6 (1)
+  [OK] cards              <script id="cards-5"> com 5 cartões (1)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão / 5 frentes em forma pergunta-decisão-contraste-diagnóstico-aplicação / operação difere (recap afirma; cartões recuperam ou aplicam)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: 2 quiz data-fb presentes (step 2 resposta c, step 4 resposta a)
+-->
+</section>

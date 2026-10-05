@@ -1,0 +1,272 @@
+<section class="view" data-aula="2" data-tempo="20min" id="v-aula-2">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Course · Lesson 2</p>
+<h1>The engine <em>behind the scenes</em>:<br/>the 3 layers</h1>
+<p class="promise">By the end of this lesson, you’ll be able to sketch the 3 layers of any professional automation on paper—and identify which layer is missing when an offer is too fragile to be worth the price.</p>
+<!-- tempo renderizado pelo motor logo após a promessa -->
+<p class="why">In Lesson 1, you chose a task and a name. Now comes the part where most people buy and sell in the dark: someone shows you a “ready-made” automation, and you don’t know if it can handle a real client. The market is full of fragile setups sold as professional solutions. Once you can see the engine inside, you stop having to take the seller’s word for it.</p>
+<p class="cue"><span class="arw">↓</span> role to study</p>
+</div>
+<!-- herofig: METÁFORA DO MUNDO REAL — cozinha de casa (tudo numa bancada) vs cozinha profissional (estações + comandas) -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<line stroke="var(--line2)" stroke-dasharray="4 5" stroke-width="1" x1="112" x2="112" y1="24" y2="224"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="1" x="16" y="34">HOME KITCHEN</text>
+<rect height="52" rx="4" stroke="var(--line2)" stroke-width="1.5" width="78" x="18" y="132"></rect>
+<line stroke="var(--line2)" stroke-width="1" x1="18" x2="96" y1="148" y2="148"></line>
+<circle cx="42" cy="122" r="10" stroke="var(--line2)" stroke-width="1.5"></circle>
+<line stroke="var(--line2)" stroke-width="1.5" x1="52" x2="66" y1="122" y2="122"></line>
+<path d="M36 104 q3 -6 0 -12 M46 104 q3 -6 0 -12" stroke="var(--line2)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="206">everything on one workbench</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="1" x="126" y="34">PROFESSIONAL KITCHEN</text>
+<line stroke="var(--warm)" stroke-width="1.5" x1="126" x2="282" y1="62" y2="62"></line>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="136" y="62"></rect>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="196" y="62"></rect>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="254" y="62"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="126" y="102">commands: nothing gets lost</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="126" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="132" y="200">receives</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="182" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="190" y="200">decides</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="238" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="252" y="200">exits</text>
+<path d="M170 156 h8" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M175 151 l5 5 -5 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M226 156 h8" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M231 151 l5 5 -5 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="126" y="226">same food · different structure</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> Building blocks: great for getting started, risky to rely on</h2>
+<p>There are tools—n8n and Make are the best known—that let you build an automation by fitting ready-made blocks together on screen. Each block does one thing: “when an email like this arrives,” “copy it to the spreadsheet,” “send this alert.” Think building blocks: no construction work, no special tools, any adult can put them together—and get something working in an afternoon.</p>
+<p>To get started, it’s a clear advantage: you can test an idea with someone real and deliver your first solutions for free.</p>
+<p>The risk appears when the toy becomes a bridge: the setup stops being a test and starts supporting someone's work. That's when three cracks appear. The bill: every block that queries AI costs pennies, and the monthly total comes as a surprise. The hunt: when something breaks, finding the block at fault is manual work, click by click. The rollback: there's no “yesterday's version saved”—if you make a change and make things worse, it's hard to go back.</p>
+<!-- exemplo-profissao -->
+<p>The administrative assistant who manually reconciles senior management’s calendar with the orders spreadsheet builds a simple flow in blocks: a new request comes in by email, gets added to the spreadsheet, and the director receives an alert. Three months later, the whole company trusts it. One day, the alert doesn’t go out and a large order slips through. She spends the afternoon clicking through each block, looking for where the chain broke.</p>
+<div class="qerr">
+<p class="qk">Common mistake</p>
+<p class="qerr-txt"><b>Automate before validating manually.</b> The blocks are so quick that you’ll want to automate on day one. Do the task by hand a few times first: if the rule won’t fit on a sheet of paper, automation will only speed up the mistake — and hide it.</p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">mark as read</button>
+</section>
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> Every serious automation has three layers — and you already know all three</h2>
+<p>Look at the image at the top: the home kitchen and the professional kitchen make the same food. The difference is the setup — separate stations and an order board where no request gets lost. Professional automation works the same way: three layers.</p>
+<p><b>Layer 1 — Input.</b> Everything that triggers the automation comes in through one place and is recorded right away — like an order coming in at the counter. Email, form, message: record it first, then get to work.</p>
+<p><b>Layer 2 — Decision.</b> The kitchen separates two types of requests. A menu item follows a fixed rule: same recipe, same result, every time — "if the amount exceeds this, send it for approval." An off-menu request requires judgment: understanding ambiguous text, deciding case by case — and that’s where AI comes in. Fixed rules are cheap and predictable; judgment is expensive — use it where it’s worth it.</p>
+<p><b>Layer 3 — Logged output.</b> The result comes through—and gets recorded in the <span class="gterm" data-def="O caderno da automação: o que ela fez, quando, para quem e com qual resultado. É o que permite auditar e refazer o que falhou." tabindex="0">logbook</span>: what was done, when, and for whom. It’s the archived ticket. Without this layer, an error stays invisible until the client complains.</p>
+<!-- exemplo-profissao -->
+<p>An attorney’s lease drafts change only the names, dates, and amounts. Input: the new tenant’s form arrives and is logged. Decision: the fixed rule fills in the template; an unusual case—a guarantor abroad—goes to the attorney for judgment. Output: the draft is ready, and the log records which template and data were used, and on what day. If a contract comes out wrong, the attorney knows which one and only has to redo that one.</p>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">mark as read</button>
+</section>
+<div class="qbefore-after">
+<div class="qba-col qba-before">
+<p class="qba-lbl">Before</p>
+<p class="qba-txt">The draft automation runs in blocks, without a log. The lawyer doesn’t trust it: he checks each one, for about 40 minutes a day — without knowing what ran overnight.</p>
+</div>
+<div class="qba-col qba-depois">
+<p class="qba-lbl">After</p>
+<p class="qba-txt">With the output logged, they open the logbook and check only the items marked as out of the ordinary: about 5 minutes, confident that nothing went unnoticed.</p>
+</div>
+<p class="qba-saldo">Balance: <b>~35 minutes recovered per day</b> — and a ready answer to “what did this automation do yesterday?”</p>
+</div>
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> Four signs that the setup has become way too serious</h2>
+<p>Nobody abandons the blocks on principle—the decision is a diagnosis. There comes a point when maintaining the setup costs more than rebuilding it in three layers; four signs show you’ve reached that point.</p>
+<ul>
+<li><b>Moves money or sensitive data.</b> Contracts, billing, payroll: mistakes here mean losses or lawsuits, not rework.</li>
+<li><b>Someone depends on it every day.</b> It stopped being an experiment and became someone else’s operation.</li>
+<li><b>If it fails in the middle of the night, no one notices.</b> The damage only becomes clear when the client asks, “Where's my response?”</li>
+<li><b>Nobody knows how much it costs to run each month.</b> The bill arrives, but the explanation doesn’t.</li>
+</ul>
+<p>Two or more warning signs: time for the professional layer — the same logic, rebuilt with three safeguards. The activity log. The pending-items queue: failures don’t disappear; they wait to be retried. And yesterday’s version saved, so you can roll back in seconds. Migration is never all at once: change the automation that causes the most pain first.</p>
+<!-- exemplo-profissao -->
+<p>Back to the lawyer. The contract-drafting automation has grown: 30 contracts a week, and now it also sends out signature requests—a legal commitment in motion. Add daily dependence and sensitive data: too many warning signs are lit. Keeping this in separate blocks isn’t savings; it’s a gamble with the firm’s name on the line.</p>
+<div class="quiz" data-answer="b">
+<p class="qk">Test yourself</p><p class="q">Three automations run in blocks. Which one needs the professional layer first?</p>
+<button class="opt" data-k="a">The internal reminder that tells the team whose birthdays are coming up this month</button>
+<button class="opt" data-fb="Dinheiro em movimento e dependência diária: dois sinais acesos ao mesmo tempo. É onde uma falha silenciosa custa mais caro." data-k="b">The billing process that moves client payments every day</button>
+<button class="opt" data-k="c">The draft responses you review before sending</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">mark as read</button>
+</section>
+<section class="step" data-fig="4" data-kind="fundamento">
+<h2><span class="n">04</span> You don’t build the professional layer—you charge for it and hire the right people</h2>
+<p>Here’s the relief this lesson offers: you won’t build any of this—the professional layer is the work of a programmer. Your role, the best-paid one in the process, is different: design the layers, identify what’s missing, and hire someone by asking the right questions.</p>
+<p>There are four questions. Where is the logbook? When something fails, does it land in a pending items queue or disappear? Can you roll back to yesterday's version if something gets worse? And how much does it cost to run this a thousand times a month? Someone who actually builds can answer all four without hesitation. Someone selling a facade changes the subject at the second one.</p>
+<p>As a buyer, you stop accepting quotes without knowing what you’re getting. As a seller, the layer design becomes the first page of the proposal—and the client understands why you cost more than their nephew’s setup.</p>
+<!-- exemplo-profissao -->
+<p>An accountant gets an offer for payroll automation at a price that seems too good to be true. She asks the four questions. At the second—"and when it fails, where does it go?"—the salesperson stammers: "We keep an eye on it." She turns it down on the spot: payroll moves real people’s salaries, and "keeping an eye on it" isn’t a layer, it’s a promise.</p>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">mark as read</button>
+</section>
+<div class="qanchor"><p>Any automation that can’t tell you what it did yesterday is fragile.</p></div>
+<!-- Decisão de registro: SEM .termdemo nesta aula — não há comando real a demonstrar; todos os slots de figura usam diagrama-de-mecanismo. -->
+<section class="practice" data-mode="prompt" data-practice="p1">
+<p class="pk">Practice now <span class="pcount">0/3 done</span></p>
+<h3 class="ph">Map the 3 layers of one of your tasks — using a chat AI</h3>
+<p class="pgoal">A text diagram, made by AI, showing the 3 layers of ONE repetitive task in your work—and pointing out the most fragile layer. ~10 min.</p>
+<p class="psafe">You’ll only chat with an AI—nothing connects to your work, and nothing is created or changed. If the answer is confusing, paste the prompt again and adjust what’s between &lt; &gt;.</p>
+<p>The block below looks long, but it’s just a written prompt—a form: the sections between &lt; &gt; are the fields you fill in; the rest stays as is.</p>
+<div class="pcodewrap"><button class="pcopy" type="button">copy</button><pre class="pcode">Desenhe, em texto simples e sem nenhum termo técnico,
+a automação de uma tarefa repetitiva do meu trabalho.
+
+Minha tarefa: &lt;descreva a tarefa, ex.: conferir os pedidos da planilha e avisar o cliente&gt;
+Ela começa quando: &lt;o que dispara a tarefa, ex.: chega um pedido novo por e-mail&gt;
+O resultado no fim: &lt;o que precisa sair, ex.: cliente avisado e pedido anotado&gt;
+
+Desenhe a automação nestas 3 camadas:
+1. ENTRADA — o que chega, por onde, o que é anotado na hora;
+2. DECISÃO — o que segue regra fixa e o que exige julgamento;
+3. SAÍDA COM REGISTRO — o que sai e o que fica no diário de bordo.
+
+No fim, aponte a camada mais frágil se isso fosse
+montado às pressas, e por quê.</pre></div>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Open ChatGPT, Claude, or Gemini—any of them will do, and a free account is fine. Copy the block above and replace the three sections between &lt; &gt; with your task.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Send it and read it carefully. What you should see: the 3 layers named, with your task distributed across them—something like “INPUT: the request arrives by email and is recorded.”</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Write down the layer the AI identified as weak, and write 1 question you’d ask whoever built it. You’re done when you have the design and question written down.</label></li>
+</ol>
+<p class="pdone">You’ve just designed the engine of a professional automation—the worksheet that, when you get a quote, separates people who buy promises from those who hire a service.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Poucas peças resolvem rápido; quando a pilha passa a sustentar peso de verdade, cruza um limite que os blocos não seguram." data-fig="1">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<line stroke="var(--warm)" stroke-dasharray="5 4" stroke-width="1.5" x1="14" x2="206" y1="72" y2="72"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="64">toy’s limit</text>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="28" y="146"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="28" y="122"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="184">test: OK</text>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="130" y="146"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="134" y="122"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="128" y="98"></rect>
+<rect height="20" rx="3" stroke="var(--line2)" stroke-width="1.5" width="34" x="136" y="74"></rect>
+<rect height="20" rx="3" stroke="var(--line2)" stroke-width="1.5" width="34" x="132" y="50"></rect>
+<path d="M147 94 l6 8 -8 6 7 8" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="120" y="184">operation: splits</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; As 3 camadas: tudo entra por um lugar e é anotado; a decisão separa regra fixa de julgamento; nada sai sem registro." data-fig="2">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="32" rx="6" stroke="var(--accent)" stroke-width="1.5" width="140" x="40" y="12"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="32">1 ENTRY · take notes</text>
+<path d="M110 44 v12" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M105 50 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="52" rx="6" stroke="var(--accent)" stroke-width="1.5" width="140" x="40" y="64"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="82">2 DECISION</text>
+<line stroke="var(--line2)" stroke-width="1" x1="110" x2="110" y1="88" y2="110"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="50" y="104">fixed rule</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="118" y="104">judgment</text>
+<path d="M110 116 v12" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M105 122 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="32" rx="6" stroke="var(--warm)" stroke-width="1.5" width="140" x="40" y="136"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="156">3 OUTPUT + record</text>
+<rect height="22" rx="2" stroke="var(--warm)" stroke-width="1.5" width="20" x="186" y="142"></rect>
+<line stroke="var(--warm)" stroke-width="1" x1="190" x2="202" y1="149" y2="149"></line>
+<line stroke="var(--warm)" stroke-width="1" x1="190" x2="202" y1="155" y2="155"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="40" y="188">the logbook stays here</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Os 4 sinais de migração: dois acesos ao mesmo tempo já empurram a automação dos blocos para a camada profissional." data-fig="3">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="60" rx="6" stroke="var(--line2)" stroke-width="1.5" width="80" x="20" y="70"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="96">automation</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="110">in blocks</text>
+<circle cx="34" cy="52" r="4" stroke="var(--warm)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="56">money</text>
+<circle cx="34" cy="152" r="4" stroke="var(--warm)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="156">every day</text>
+<circle cx="34" cy="30" r="4" stroke="var(--line2)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="34">sensitive data</text>
+<circle cx="34" cy="174" r="4" stroke="var(--line2)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="178">cost ?</text>
+<path d="M104 100 h28" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M126 95 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="102" y="92">2+ signals</text>
+<rect height="60" rx="6" stroke="var(--accent)" stroke-width="1.5" width="72" x="136" y="70"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="96">layer</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="110">professional</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Você desenha as camadas e faz as 4 perguntas; quem programa constrói — e o cliente paga pelo desenho e pela garantia." data-fig="4">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="90" rx="5" stroke="var(--accent)" stroke-width="1.5" width="70" x="18" y="40"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="62" y2="62"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="84" y2="84"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="106" y2="106"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="150">your design</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="164">3 layers</text>
+<path d="M92 85 h32" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M118 80 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="88" y="74">4 questions</text>
+<rect height="90" rx="5" stroke="var(--line2)" stroke-width="1.5" width="72" x="130" y="40"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="70">who</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="84">program</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="98">builds</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="130" y="150">you charge for the</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="130" y="164">design + guarantee</text>
+</svg>
+</div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Highlight any passage to turn it into a review card.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-2 -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Summary</p>
+<ul>
+<li>Block-based tools give you speed at the start; when someone’s work begins to depend on them, the cracks show.</li>
+<li>Professional automation has three layers: where everything comes in, who decides—fixed rule or judgment—and the logged output.</li>
+<li>The log separates service from promises: it records what happened, when, and for whom, and lets you redo what failed.</li>
+<li>Money in motion, sensitive data, daily dependence, and unpredictable costs are signs it’s time to migrate; two together are enough.</li>
+<li>Your role isn't to build it: it's to design the layers, charge for that design, and hire someone to build it by asking the right questions.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Your next step</p>
+<p class="na-win">You’ve just gained the map most automation sellers hope their clients never get.</p>
+<p class="na-action">Over the next 15 minutes, mark an X on the practice diagram next to the weakest layer—and write the first question you’d ask whoever builds it.</p>
+<p class="na-hook">In the next lesson, you’ll build your content engine—the machine that gets your name out there every week without making you a slave to posting.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← track</a><a href="#aula-3">next lesson →</a></nav>
+<footer>Lesson 2 · How to Build an AI Services Business · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — nunca resumo do recap acima -->
+<script id="cards-2" type="application/json">
+[
+  {"front":"Uma automação entrega certinho há meses, mas ninguém sabe dizer o que ela fez ontem. Qual camada falta — e qual o risco escondido?","back":"Falta a terceira: a saída registrada no diário de bordo. Sem ela, um erro só aparece quando o cliente reclama — e não dá para refazer apenas o caso que quebrou."},
+  {"front":"Um construtor oferece a mesma automação pela metade do preço, \"só sem o diário de bordo\". Você fecha o negócio?","back":"Não. O desconto remove exatamente o que permite auditar falhas e refazer casos perdidos. Quando quebrar — e vai quebrar —, a economia vira prejuízo e o problema fica com você."},
+  {"front":"No desenho da camada de decisão, o que trava em regra fixa e o que vai para o julgamento da IA?","back":"Regra fixa: o que é testável e dá o mesmo resultado sempre (valor acima de X, prazo vencido) — barato e previsível. Julgamento: interpretar texto ambíguo e decidir caso a caso — é onde a IA vale o custo."},
+  {"front":"Uma cliente pede orçamento para automatizar respostas a e-mails de reclamação. Como você divide o trabalho entre as camadas?","back":"Entrada: toda reclamação chega por um lugar só e é anotada antes de tudo. Decisão: a IA julga o tom e rascunha; casos com valor alto ou ameaça de processo travam em regra fixa e vão para revisão humana. Saída: resposta enviada e anotada no diário."}
+]
+</script>
+<!--
+COMPLETUDE aula-2 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: desenhar as 3 camadas no papel + identificar a camada que falta
+  [OK] why                .why após a promessa (1) — problema real: comprar e vender automação no escuro, mercado cheio de montagem frágil
+  [OK] tempo              data-tempo="20min" no view (1); ~1.9k palavras (≈9,5min) + prática ~10min + 1 quiz (~30s), arredondado p/ cima = 20min
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: assistente administrativa, advogado, advogado, contadora — situações novas, sem reuso da aula 1)
+  [OK] apoio-visual       figura diagrama-de-mecanismo legendada por step (4/4 data-fig, data-cap que ensina); herofig = metáfora cozinha de casa vs profissional
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1) — realiza a promise: a IA desenha as 3 camadas da tarefa do aluno
+  [OK] psafe              .psafe dentro da prática (1) — só conversa com IA de chat, nada se conecta nem altera
+  [OK] pgoal-tempo        .pgoal com "~10 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho (1) — 5 <li> afirmativos, síntese, zero pergunta
+  [OK] next-action        .next-action no fecho (1) — microvitória nomeada + microação 15min + gancho aula 3 (motor de conteúdo)
+  [OK] cards              <script id="cards-2"> presente (4 cartões: diagnóstico, decisão, contraste, aplicação — zero afirmação na frente)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão; 100% frentes em pergunta/decisão/contraste/aplicação; operação difere (recap afirma, cartões exigem recuperar/decidir/aplicar)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz no step 3, data-fb só na correta)
+Dosagem pool=5: quiz(1) + cartões(4) + qbefore-after(1, saldo ~35min/dia) + qanchor(1) + qerr(1, automatizar antes de validar). Espaçamento: qerr no step 1, quiz no step 3 (steps 2 e 4 limpos — nunca 2 quadros em steps adjacentes); qbefore-after standalone entre s2 e s3; qanchor standalone após s4. Rampa de acesso antes do bloco colável da prática (formulário: campos entre < >). Jargão traduzido: fila = bandeja de pendências; registro = diário de bordo; versionamento = versão de ontem guardada; sem API/JSON/terminal/servidor. Sem .termdemo (nenhum comando real nesta aula).
+-->
+</section>

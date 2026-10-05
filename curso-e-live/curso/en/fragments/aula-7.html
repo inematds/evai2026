@@ -1,0 +1,286 @@
+<section class="view" data-aula="7" data-tempo="20min" id="v-aula-7">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Course · Lesson 7</p>
+<h1>Agents that work<br/><em>while you sleep</em></h1>
+<p class="promise">By the end of this lesson, you’ll decide how much freedom to give an AI agent for 3 real tasks in your work—and know exactly where each task’s stop button is.</p>
+<!-- tempo renderizado pelo motor logo após a promessa -->
+<p class="why">So far, everything you’ve seen in this course waits for you to press the button. But the most costly tasks in your day don’t wait: a post goes out in the early hours, a new property gets listed on Sunday, a deadline keeps running while you help someone else. This lesson asks a business owner’s question: how much freedom should you give an AI that works when you’re away—and how do you keep your hand on the switch?</p>
+<p class="cue"><span class="arw">↓</span> role to study</p>
+</div>
+<!-- herofig: METÁFORA DO MUNDO REAL — casa à noite, uma luz acesa no escritório, relógio de madrugada -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<line stroke="var(--line2)" stroke-width="1.5" x1="20" x2="280" y1="204" y2="204"></line>
+<path d="M58 108 L150 52 L242 108" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="96" stroke="var(--line2)" stroke-width="1.5" width="160" x="70" y="108"></rect>
+<rect height="44" stroke="var(--line2)" stroke-width="1.5" width="26" x="138" y="160"></rect>
+<rect height="24" rx="2" stroke="var(--line2)" stroke-width="1.5" width="28" x="84" y="124"></rect>
+<rect height="24" rx="2" stroke="var(--line2)" stroke-width="1.5" width="28" x="188" y="164"></rect>
+<rect height="24" rx="2" stroke="var(--line2)" stroke-width="1.5" width="28" x="84" y="164"></rect>
+<rect height="28" rx="2" stroke="var(--accent)" stroke-width="1.5" width="32" x="186" y="122"></rect>
+<line stroke="var(--accent)" stroke-width="1" x1="190" x2="214" y1="128" y2="128"></line>
+<line stroke="var(--accent)" stroke-width="1" x1="190" x2="208" y1="134" y2="134"></line>
+<line stroke="var(--accent)" stroke-width="1" x1="190" x2="212" y1="140" y2="140"></line>
+<path d="M202 116 l-4 -10 M210 116 l4 -10" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M252 40 a14 14 0 1 0 8 24 a11 11 0 0 1 -8 -24" stroke="var(--line2)" stroke-width="1.5"></path>
+<circle cx="44" cy="52" r="20" stroke="var(--warm)" stroke-width="1.5"></circle>
+<line stroke="var(--warm)" stroke-width="1.5" x1="44" x2="44" y1="52" y2="40"></line>
+<line stroke="var(--warm)" stroke-width="1.5" x1="44" x2="52" y1="52" y2="58"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="86">3 a.m.</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="96" y="226">a light on in the office</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> A tool responds when you call; an on-call employee works on an agreed schedule</h2>
+<p>Everything you've used AI for so far only works while you're in front of the screen. You ask, it answers, the conversation ends, and it stops. It's a tool. A <span class="gterm" data-def="Programa de IA que recebe uma missão e executa os passos sozinho, em horários combinados, sem você por perto a cada passo." tabindex="0">agent</span> is a different category: an AI program that receives a mission and carries out the steps on its own, even when you’re not around.</p>
+<p>What changes isn't the intelligence—it's the alarm clock. An agent gets a <b>task alarm</b>: a scheduled time or event that wakes it up to work. "Every morning at 6 a.m., check this and prepare that." Instead of waking you up, the alarm wakes up the work. It’s the leap from tool to on-call digital employee.</p>
+<!-- exemplo-profissao -->
+<p>Look at attorney Dr. Marta’s office. The notices relevant to her cases come in overnight, but she can review them only midmorning, when her assistant can step away. With an on-call agent, the alarm goes off at 6 a.m.: it checks the notices and prepares, by 7 a.m., a summary of what came in and which deadlines have started. Notice the limit: this is administrative review work. The attorney still interprets each deadline and decides what to do—no legal decisions come from the agent.</p>
+<div class="qbefore-after">
+<div class="qba-col qba-before">
+<p class="qba-lbl">Before</p>
+<p class="qba-txt">You do the check whenever you have a spare moment—if you do. Between searching, taking notes, and notifying people, that adds up to about 5 hours a week, always with the feeling that you’re behind.</p>
+</div>
+<div class="qba-col qba-depois">
+<p class="qba-lbl">After</p>
+<p class="qba-txt">The agent runs at the agreed time every morning, and you only review the result: about 15 minutes a day over coffee.</p>
+</div>
+<p class="qba-saldo">Balance: <b>~4 hours recovered per week</b> — and the task no longer depends on having spare time.</p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">mark as read</button>
+</section>
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> Autonomy is granted one rung at a time — there are four, in this order</h2>
+<p>Accepting that an agent can work on its own isn’t a yes-or-no decision. It’s a scale with four steps, each giving it a little more freedom:</p>
+<ul>
+<li><b>Step 1 — Just alerts you.</b> It watches and tells you: “this came up, take a look.” Nothing happens without you.</li>
+<li><b>Step 2 — Prepares it and waits for approval.</b> It gets the work ready — the message written, the summary prepared — and waits for you to say, "go ahead and send it."</li>
+<li><b>Step 3 — Does it and reports back.</b> Works independently and keeps a record of everything it did for you to review later.</li>
+<li><b>Step 4 — Does it without reporting back.</b> Reserved for things with no consequences if they go wrong. For almost anything that affects a client or money, don’t use this level.</li>
+</ul>
+<p>Here’s a rule of thumb: <b>never give an agent more freedom than you would give an intern in their first week.</b> You wouldn’t let a newcomer sign in your name on their first day, no matter how brilliant the interview was. It’s the same with an agent: move up one level at a time, and only after several days of logged work without needing corrections.</p>
+<!-- exemplo-profissao -->
+<p>Paulo, a real estate agent, wants every client to know right away when a new property comes on the market that matches what they’re looking for. Level 1: the agent checks the new property against the client list and alerts Paulo himself—"this apartment matches Célia’s search." Two weeks later, level 2: the message to Célia is ready, and Paulo only has to approve sending it. Later, level 3: it sends on its own and keeps a list of what it sent. He decides never to use level 4—messaging clients is central to how he does business.</p>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">mark as read</button>
+</section>
+<div class="qerr">
+<p class="qk">Common mistake</p>
+<p class="qerr-txt"><b>Turn the agent on at the highest rung on day one.</b> This happens because the demo is impressive and makes you want to “automate everything at once.” But a good demo isn’t the same as a week of real work with real exceptions. Start at step 1 or 2, let a few days of work run without correction, then move up one step at a time—never two.</p>
+</div>
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> The three safeguards: the circuit breaker, the log, and the daily limit</h2>
+<p>One plain truth: <b>agents make mistakes.</b> Not because of some rare defect—making mistakes from time to time is part of how any AI works, just as it is for any employee. A serious professional doesn’t promise that the agent will never make a mistake; they set up the three safeguards that make mistakes small, visible, and reversible:</p>
+<ul>
+<li><b>The circuit breaker.</b> A way to stop everything in less than a minute, which you know how to activate yourself. Like the circuit breaker at home: you may never need it, but you know where it is—and that changes your whole relationship with electricity.</li>
+<li><b>The log.</b> The record of what the agent did, when, and for whom. It doesn't prevent errors—it shortens the time until you spot them. An error caught the next morning means a phone call; one caught three weeks later means a lost client.</li>
+<li><b>The daily limit.</b> A cap on how many messages it sends, or how much it spends, per day. Once it hits the cap, it stops and asks. Unusual volume is almost always a sign of a problem—the limit turns that sign into an automatic pause.</li>
+</ul>
+<!-- exemplo-profissao -->
+<p>Dr. Marta only approved the publishing agent after requiring all three in writing: the circuit breaker is a pause button the secretary knows how to press; the logbook is the list of what was checked and reported, reviewed every day over coffee; and the limit was set at 10 alerts a day — the office never exceeds that, so a day with 11 is, by definition, a day when the agent must stop and ask.</p>
+<div class="quiz" data-answer="b">
+<p class="qk">Test yourself</p><p class="q">A lawyer’s agent sent a deadline notice to the wrong client in the middle of the night—and she didn’t find out until three days later, when the client called. Which safeguard was missing first?</p>
+<button class="opt" data-k="a">The daily limit—a cap on reminders would have blocked the send</button>
+<button class="opt" data-fb="O erro aconteceria do mesmo jeito — mas ela saberia na manhã seguinte, não três dias depois. Diário de bordo não impede o erro; encurta o tempo até você enxergá-lo." data-k="b">The log reviewed every morning</button>
+<button class="opt" data-k="c">The circuit breaker—she should have turned off the agent at night</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">mark as read</button>
+</section>
+<section class="step" data-fig="4" data-kind="fundamento">
+<h2><span class="n">04</span> Six questions to ask before leaving any agent on duty</h2>
+<p>You’ve got the yardstick in hand and understand the safeguards—the contract is all that’s missing. Before leaving an agent on duty (yours or a client’s), put it through six questions a business owner would ask. It’s not a technical test; it’s the check you’d do before leaving someone new in charge of the store on a Saturday.</p>
+<ol>
+<li><b>What wakes it up?</b> Is there an agreed task trigger—time or event—or does it depend on someone remembering to ask?</li>
+<li><b>What is his job title?</b> Just one function, with a clear beginning and end—or has it turned into a do-everything tool no one can describe in one sentence?</li>
+<li><b>What does it already know about you?</b> What was taught once—your style, your rules, your exceptions—is saved, or do you have to explain it again every week?</li>
+<li><b>What level is it at?</b> And does the track record justify this step, or did the freedom come before the proof?</li>
+<li><b>How do you check?</b> Is there a logbook and a clear agreement on what “good work” looks like?</li>
+<li><b>Where’s the bottleneck?</b> Can you point to the circuit breaker and state the day’s limit without having to think?</li>
+</ol>
+<p>It’s simple: six "yes" answers and it goes on duty. Any "no" and it doesn’t go on duty yet — or it starts at a lower level until the answer becomes "yes."</p>
+<!-- exemplo-profissao -->
+<p>Before moving his notification agent up to level 3, Paulo went through the six questions—and got stuck on the third: every week he had to re-explain the clients’ search profiles because nothing was being saved. The agent still "forgot" who Célia was. He fixed that first, and only then moved it up a level. Catching that "no" in time cost a week; ignoring it would have cost him a wrong message sent to his entire client list.</p>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">mark as read</button>
+</section>
+<div class="qanchor"><p>Autonomy comes in stages, not all at once.</p></div>
+<!-- Decisão de registro: SEM .termdemo nesta aula — não há comando real a demonstrar; os 4 slots de figura usam diagrama-de-mecanismo. -->
+<section class="practice" data-mode="analise" data-practice="p1">
+<p class="pk">Practice now <span class="pcount">0/3 done</span></p>
+<h3 class="ph">Renato’s case—decide his level before he does</h3>
+<p class="pgoal">Answer the case’s 3 questions in writing and compare your answers with the annotated answer key. You’re done when you’ve compared all three answers. ~10 min.</p>
+<p class="psafe">Nothing here runs for real—this is a paper exercise, designed to make mistakes at no cost. If your answer differs from the answer key, even better: the difference is where you fine-tune your standards.</p>
+<p><b>The case.</b> Renato, an accountant, built an agent with help from his nephew. Every morning at 7 a.m., it checks the month’s list of obligations and automatically emails deadline reminders to clients who haven’t sent in their documents yet. The first week went smoothly. In the second week, a client got a reminder about an obligation that wasn’t theirs—and called in a panic. Renato doesn’t want to give up; he wants to adjust the setup.</p>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Read the case twice and note which rung of the scale Renato’s agent was operating at.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Write your answers to the 3 questions: (1) what level should sending have started at—and what level was it at? (2) which safeguards would have reduced the shock, and how? (3) and now: turn it off, keep it, or change levels—which one, and what would authorize moving up again?</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Open the answer key with explanations and compare it with what you wrote, question by question.</label></li>
+</ol>
+<details>
+<summary>see the answer key with explanations</summary>
+<p><b>1 — Step.</b> It was at level 3 (does the work and reports back—and, in practice, Renato didn’t even review the report). Under the intern rule, a reminder sent to a client should have started at level 2: the agent prepares the emails, and Renato approves the batch before it goes out. A message that reaches a client is sensitive—freedom there is earned, not given at the start.</p>
+<p><b>2 — Safeguards.</b> Reviewing the log every morning would have helped Renato catch the wrong email that same day, before the phone call—it would have reduced the shock the most. The daily limit would catch the problem if it happened at scale (10 reminders on a day with a limit of 3 would trigger an automatic pause). And the circuit breaker doesn't prevent anything, but it turns “now what?” into “I paused it in a minute.”</p>
+<p><b>3 — Decision.</b> Neither shut it down completely nor keep it as is: move it down to level 2 and turn on all three safeguards. It goes back to level 3 when the log has two or three weeks of batches approved without corrections. The mistake doesn’t disqualify the agent—it disqualifies the level it was placed at too soon.</p>
+</details>
+<p class="pdone">You just made, on paper, the decision that separates people who sell agents from people who sell scares: choosing the level and safeguards before turning anything on.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Em cima, a ferramenta: nada acontece até você chamar. Embaixo, o agente de plantão: o despertador de tarefa o acorda no horário combinado — e você entra só na revisão." data-fig="1">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="16" y="20">TOOL</text>
+<circle cx="30" cy="46" r="10" stroke="var(--line2)" stroke-width="1.5"></circle>
+<path d="M46 40 h44 v16 h-36 l-8 8 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M96 48 h26" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M116 43 l6 5 -6 5" stroke="var(--line2)" stroke-width="1.5"></path>
+<rect height="24" rx="5" stroke="var(--line2)" stroke-width="1.5" width="72" x="128" y="36"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="136" y="51">responds</text>
+<line stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1" x1="16" x2="204" y1="86" y2="86"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="16" y="106">ON-CALL AGENT</text>
+<circle cx="32" cy="136" r="12" stroke="var(--warm)" stroke-width="1.5"></circle>
+<line stroke="var(--warm)" stroke-width="1.5" x1="32" x2="32" y1="136" y2="128"></line>
+<line stroke="var(--warm)" stroke-width="1.5" x1="32" x2="38" y1="136" y2="139"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="20" y="162">6h</text>
+<path d="M48 136 h20" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M62 131 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="28" rx="5" stroke="var(--accent)" stroke-width="1.5" width="62" x="74" y="122"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="82" y="139">works</text>
+<path d="M136 136 h20" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M150 131 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="28" rx="5" stroke="var(--line2)" stroke-width="1.5" width="44" x="162" y="122"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="168" y="139">you</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="130" y="172">reviews at 7 a.m.</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; A régua da autonomia: quatro degraus, subidos um por vez — cada subida se paga com dias de trabalho registrado sem correção." data-fig="2">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<path d="M16 176 h44 v-36 h44 v-36 h44 v-36 h44" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="168">1 just warns</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="62" y="132">2 prepares and</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="62" y="144">  wait for OK</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="106" y="96">3 does it and reports back</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="150" y="60">4 does it without</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="150" y="72">  report</text>
+<circle cx="38" cy="186" r="5" stroke="var(--warm)" stroke-width="1.5"></circle>
+<path d="M50 184 C74 172, 84 156, 92 146" stroke="var(--warm)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<path d="M88 144 l7 0 -2 7" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="16" y="30">one step at a time,</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="16" y="42">never two</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; As três salvaguardas trabalham juntas: o disjuntor para tudo, o diário de bordo mostra o que houve, o limite segura o volume do dia." data-fig="3">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="64" rx="6" stroke="var(--warm)" stroke-width="1.5" width="52" x="20" y="24"></rect>
+<rect height="28" rx="3" stroke="var(--warm)" stroke-width="1.5" width="16" x="38" y="36"></rect>
+<line stroke="var(--warm)" stroke-width="1.5" x1="46" x2="46" y1="42" y2="52"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="20" y="104">circuit breaker</text>
+<rect height="64" rx="6" stroke="var(--accent)" stroke-width="1.5" width="52" x="86" y="24"></rect>
+<line stroke="var(--accent)" stroke-width="1.5" x1="94" x2="130" y1="40" y2="40"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="94" x2="124" y1="52" y2="52"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="94" x2="128" y1="64" y2="64"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="94" x2="120" y1="76" y2="76"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="86" y="104">log of</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="86" y="116">on the edge</text>
+<rect height="64" rx="6" stroke="var(--accent)" stroke-width="1.5" width="52" x="152" y="24"></rect>
+<path d="M162 72 a18 18 0 0 1 32 0" stroke="var(--accent)" stroke-width="1.5"></path>
+<line stroke="var(--warm)" stroke-width="1.5" x1="178" x2="188" y1="72" y2="58"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="164" y="46">10/day</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="152" y="104">limit</text>
+<path d="M46 128 v14 M112 128 v14 M178 128 v14" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M46 142 H178" stroke="var(--line2)" stroke-width="1.5"></path>
+<path d="M112 142 v14" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M107 150 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="26" rx="6" stroke="var(--warm)" stroke-width="1.5" width="120" x="52" y="162"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="60" y="179">small, visible error</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; O contrato do plantão: seis perguntas com 'sim' abrem a porteira; um único 'não' devolve o agente a um degrau mais baixo até virar 'sim'." data-fig="4">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="168" rx="8" stroke="var(--line2)" stroke-width="1.5" width="112" x="16" y="16"></rect>
+<rect height="12" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="26" y="30"></rect>
+<path d="M28 36 l3 4 5 -7" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="40">wake up?</text>
+<rect height="12" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="26" y="54"></rect>
+<path d="M28 60 l3 4 5 -7" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="64">job title?</text>
+<rect height="12" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="26" y="78"></rect>
+<path d="M28 84 l3 4 5 -7" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="88">memory?</text>
+<rect height="12" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="26" y="102"></rect>
+<path d="M28 108 l3 4 5 -7" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="112">step?</text>
+<rect height="12" rx="2" stroke="var(--accent)" stroke-width="1.5" width="12" x="26" y="126"></rect>
+<path d="M28 132 l3 4 5 -7" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="136">check?</text>
+<rect height="12" rx="2" stroke="var(--warm)" stroke-width="1.5" width="12" x="26" y="150"></rect>
+<path d="M28 156 l3 4 5 -7" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="44" y="160">brake?</text>
+<path d="M132 100 h24" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M150 95 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="56" rx="6" stroke="var(--warm)" stroke-width="1.5" width="44" x="160" y="72"></rect>
+<line stroke="var(--warm)" stroke-width="1" x1="182" x2="182" y1="72" y2="128"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="160" y="146">of</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="160" y="158">on-call coverage</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="26" y="196">6 yes = green light</text>
+</svg>
+</div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Highlight any passage to turn it into a review card.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-7 -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Summary</p>
+<ul>
+<li>The shift from tool to digital employee happens when AI gets a task alarm: an agreed time or event for it to work without you around.</li>
+<li>Autonomy is granted on a four-rung scale — notify, prepare, act with a record, and, rarely, act without a record — always one at a time, just as you would with a new intern.</li>
+<li>Agents make mistakes, which is why safeguards exist: they don’t prevent mistakes; they make them small, visible, and reversible.</li>
+<li>The six questions for the on-call shift are the contract between you and the agent—as long as there’s a “no,” it works at a lower step.</li>
+<li>None of this asks you to build the technology: it asks you to make decisions—and making decisions is what you’ve been doing in your profession for decades.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Your next step</p>
+<p class="na-win">You’ve just gained an owner’s vocabulary: levels of freedom, a circuit breaker, a logbook, and a six-question contract.</p>
+<p class="na-action">Over the next 15 minutes, choose 3 real tasks from your work and write down, next to each one, what level you’d assign an agent today—and where the stop button would be. This worksheet fulfills the promise of this lesson.</p>
+<p class="na-hook">In the next lesson, the course wraps up with the conversation that changes the size of your check: how to sell to large companies — the 6-question map that turns a conversation into a contract.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← track</a><a href="#aula-8">next lesson →</a></nav>
+<footer>Lesson 7 · How to Build an AI Services Business · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — nunca resumo do recap acima -->
+<script id="cards-7" type="application/json">
+[
+  {"front":"Seu agente de avisos rodou uma semana inteira no degrau \"prepara e espera aprovação\" sem nenhum erro. O cliente pede: \"deixa tudo automático de vez\". O que você responde?","back":"Sobe um degrau só — para \"faz e relata\" — e mantém a revisão diária do registro por mais um período. Uma semana boa autoriza o degrau seguinte, nunca o topo da régua."},
+  {"front":"Um escritório garante que \"já tem um agente\": é uma janela de conversa com IA onde a secretária cola perguntas todo dia. É agente ou ferramenta — e o que falta?","back":"Ferramenta. Falta o despertador de tarefa: ali, nada começa sem alguém digitar. Vira agente quando existe hora ou acontecimento combinado que o acorda sozinho."},
+  {"front":"O corretor nota que o agente mandou 40 avisos de imóvel num único dia — o triplo do normal. Nenhum estava errado, mas ele só percebeu por acaso. O que faltou na montagem?","back":"O limite do dia. Com um teto combinado (por exemplo, 15 avisos), o agente teria parado no teto e perguntado antes de seguir — volume fora do normal deve virar pausa automática, não sorte de alguém notar."},
+  {"front":"Uma assistente administrativa quer um agente respondendo e-mails de fornecedores sozinho já na primeira semana. Que degrau você propõe, e com qual argumento?","back":"Degrau 2: ele prepara cada resposta e ela aprova o envio. Argumento do estagiário: na primeira semana, ninguém assina pelo chefe — o agente sobe quando as respostas aprovadas passarem semanas sem precisar de ajuste."}
+]
+</script>
+<!--
+COMPLETUDE aula-7 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: 3 tarefas reais + degrau decidido + botão de parar localizado
+  [OK] why                .why após a promessa (1) — tarefas que não esperam: publicação de madrugada, imóvel no domingo, prazo correndo
+  [OK] tempo              data-tempo="20min" no view (1); ~1.9k palavras de leitura (/200) + prática ~10min + 1 quiz (~30s), arredondado p/ cima
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: advogada-publicações, corretor-imóvel novo, advogada-salvaguardas, corretor-checklist; contador Renato na prática)
+  [OK] apoio-visual       figura diagrama-de-mecanismo legendada por step (4/4 data-fig, data-cap que ensina; herofig = metáfora casa à noite, sem robô)
+  [OK] practice           .practice[data-mode="analise"] (exatamente 1) — mini-caso Renato (5 frases, nome + função) + 3 perguntas + gabarito em <details>
+  [OK] psafe              .psafe dentro da prática (1) — caso no papel, errar sem custo
+  [OK] pgoal-tempo        .pgoal com "~10 min" declarado (1) + critério: comparou as três respostas com o gabarito
+  [OK] recap-autor        .recap-autor no fecho (1) — 5 <li> afirmativos, síntese, zero pergunta
+  [OK] next-action        .next-action no fecho (1) — microvitória nomeada + microação 15min (realiza a promessa) + gancho aula 8 (vender para empresas grandes, mapa de 6 perguntas)
+  [OK] cards              <script id="cards-7"> presente (4 cartões: decisão, contraste, diagnóstico, aplicação — zero afirmação na frente)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão; 4/4 frentes em forma decisão/contraste/diagnóstico/aplicação; operação difere (recap afirma a régua/salvaguardas, cartões exigem decidir degrau, diagnosticar falta, aplicar a cenário novo)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz, data-fb só na correta — diagnóstico de salvaguarda)
+Dosagem pool=5: quiz(1) + cartões(4) + qbefore-after(1, saldo ~4h/semana) + qanchor(1) + qerr(1, opcional). Espaçamento: qbefore-after no step 1, quiz no step 3 (nunca 2 quadros em steps adjacentes); qerr entre s2 e s3 e qanchor após s4, fora de steps. Jargão: "agente" definido inline + .gterm no step 1; rotinas agendadas = "despertador de tarefa"; zero termo da lista-sentinela. Sem .termdemo (nenhum comando real nesta aula). Zero emoji, zero exclamação dupla; a aula admite que agente erra (step 3 e recap).
+-->
+</section>

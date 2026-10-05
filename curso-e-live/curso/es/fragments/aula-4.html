@@ -1,0 +1,291 @@
+<section class="view" data-aula="4" data-tempo="20min" id="v-aula-4">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Curso · Lección 4</p>
+<h1>El agente de atención <em>qué dice</em>:<br/>IA por voz</h1>
+<p class="promise">Al final de esta clase podrás evaluar profesionalmente a un agente de atención por voz: conocerás las 5 formas en que falla y sabrás qué exigir antes de ponerlo frente a un cliente.</p>
+<!-- tempo renderizado pelo motor logo após a promessa -->
+<p class="why">Todas las empresas que conoces pierden clientes de la misma forma absurda: el teléfono suena en el momento equivocado y nadie responde. Ya existe un asistente que siempre contesta, y pronto alguien intentará venderte uno o pedirte que entregues uno. Saber qué mirar por dentro es lo que marca la diferencia entre comprar una promesa y comprar un producto; esta clase te enseña a mirar.</p>
+<p class="cue"><span class="arw">↓</span> cargo para estudiar</p>
+</div>
+<!-- herofig: METÁFORA DO MUNDO REAL — balcão de recepção com telefone; um recado passa de mão em mão junto com a ligação -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="2" x="24" y="30">RECEPCIÓN · SIEMPRE ATIENDE</text>
+<!-- balcão -->
+<rect height="54" rx="5" stroke="var(--line2)" stroke-width="1.5" width="240" x="30" y="150"></rect>
+<line stroke="var(--line2)" stroke-width="1" x1="30" x2="270" y1="168" y2="168"></line>
+<!-- telefone sobre o balcão -->
+<rect height="26" rx="5" stroke="var(--line2)" stroke-width="1.5" width="52" x="44" y="118"></rect>
+<rect height="11" rx="5.5" stroke="var(--line2)" stroke-width="1.5" width="60" x="40" y="106"></rect>
+<circle cx="58" cy="131" fill="var(--muted)" r="2"></circle>
+<circle cx="70" cy="131" fill="var(--muted)" r="2"></circle>
+<circle cx="82" cy="131" fill="var(--muted)" r="2"></circle>
+<path d="M96 144 q6 4 2 8 q-6 4 -2 8" stroke="var(--line2)" stroke-width="1.5"></path>
+<!-- pessoa A (atrás do balcão) -->
+<circle cx="140" cy="92" r="13" stroke="var(--line2)" stroke-width="1.5"></circle>
+<path d="M120 150 c0 -26 40 -26 40 0" stroke="var(--line2)" stroke-width="1.5"></path>
+<!-- pessoa B (na frente) -->
+<circle cx="236" cy="90" r="13" stroke="var(--line2)" stroke-width="1.5"></circle>
+<path d="M216 150 c0 -26 40 -26 40 0" stroke="var(--line2)" stroke-width="1.5"></path>
+<!-- recado passando de mão em mão -->
+<line stroke="var(--line2)" stroke-width="1.5" x1="152" x2="172" y1="112" y2="110"></line>
+<circle cx="173" cy="110" r="3" stroke="var(--line2)" stroke-width="1.5"></circle>
+<rect height="26" rx="3" stroke="var(--warm)" stroke-width="1.5" width="34" x="178" y="96"></rect>
+<line stroke="var(--warm)" stroke-width="1.5" x1="184" x2="206" y1="105" y2="105"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="184" x2="200" y1="113" y2="113"></line>
+<circle cx="217" cy="110" r="3" stroke="var(--line2)" stroke-width="1.5"></circle>
+<line stroke="var(--line2)" stroke-width="1.5" x1="220" x2="230" y1="110" y2="106"></line>
+<!-- a ligação vira recado -->
+<path d="M100 112 C 118 74, 152 70, 176 90" stroke="var(--accent)" stroke-dasharray="5 4" stroke-width="1.5"></path>
+<path d="M170 82 l6 8 -9 2" stroke="var(--accent)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="30" y="228">el mensaje pasa de mano en mano, junto con el enlace</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> Quien responde primero se lleva la venta</h2>
+<p>Décadas de investigación en ventas repiten la misma conclusión: responder a una persona interesada en un máximo de 5 minutos hace que sea decenas de veces más probable que avance el contacto que si respondes media hora después; y cerca del 78% de los compradores cierran con la primera empresa que responde. No es carisma ni precio. Son minutos.</p>
+<p>La razón es humana: el interés está en su punto más alto durante la llamada; cada minuto sin respuesta se enfría y la persona llama al siguiente de la lista.</p>
+<p>Es esta carrera la que el <span class="gterm" data-def="Um programa que atende o telefone, conversa com voz natural e resolve tarefas simples: dar uma informação, anotar um recado, marcar um horário." tabindex="0">asistente de voz</span> competencia: no duerme, no almuerza ni deja que suenen tres veces. Su valor no está en ser listo, sino en estar ahí desde el minuto uno, todas las veces.</p>
+<!-- exemplo-profissao -->
+<p>Una escena de martes: 21h07, una persona interesada llama por el apartamento que anunció un corredor. El corredor está en la cena de cumpleaños de su hija; la llamada cae en el buzón de voz. A las 9h devuelve la llamada y escucha: "ah, gracias, pero ya agendé una visita anoche". El otro anuncio tenía un operador de voz despierto a las 21h07. La venta no se perdió por la mañana; se perdió a las 21h08.</p>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">marcar como leído</button>
+</section>
+<section class="step" data-fig="2" data-kind="ferramenta" data-versao="jul/2026">
+<h2><span class="n">02</span> Por dentro, la conversación es un relevo de tres etapas</h2>
+<p>Por teléfono, la conversación parece una sola cosa. Por dentro, el agente de atención alterna entre tres etapas, siempre en este orden: <b>escuchar</b> (entender lo que dijiste), <b>decidir</b> (elegir la respuesta — consultando la agenda, si hace falta) y <b>hablar</b> (transformar la respuesta en voz). Cada etapa tarda un poquito, fracciones de segundo.</p>
+<p>E <b>las fracciones se suman</b>. La medida que importa es el tiempo entre que el cliente termina de hablar y la IA empieza a responder. Hasta medio segundo, suena natural. Cerca de un segundo, la persona lo nota. Después de un segundo y medio, habla por encima —«¿aló? ¿se cortó?»— o cuelga.</p>
+<p>La imagen adecuada es la del intérprete simultáneo de una conferencia: empieza a traducir mientras el orador todavía habla. Un agente de atención bien diseñado trabaja así. Uno mal diseñado es el intérprete que espera a que termine todo el discurso para abrir la boca: técnicamente correcto, insoportable de escuchar. Por eso la IA a veces «se traba»: algún paso del relevo se quedó esperando a que terminara el anterior. Y lo más difícil ni siquiera es responder: es saber si tú <i>terminó</i> si hablar o solo hizo una pausa para pensar.</p>
+<!-- exemplo-profissao -->
+<p>Una asistente administrativa de una oficina de contabilidad pone a prueba al operador que le ofreció el proveedor: llama desde su propio celular a las 12h30, hace tres preguntas comunes de clientes y cuenta los segundos de silencio antes de cada respuesta. Si todas las respuestas llegan después de una pausa larga, los clientes colgarán pensando que se cortó la llamada — y el "operador que no pierde llamadas" las perderá todas.</p>
+<p>El dibujo de al lado parece un esquema de ingeniería, pero léelo como una carrera de relevos: el segundo corredor sale antes de que el primero cruce la línea.</p>
+<div class="qerr">
+<p class="qk">Error común</p>
+<p class="qerr-txt"><b>Prometerle al cliente que la IA «nunca se equivoca».</b> La demostración sale perfecta y dan ganas de vender perfección, pero el relevo tropieza: una pausa larga por aquí, una palabra mal entendida por allá. Promete lo que puedes sostener: «atiende siempre, resuelve lo habitual y deriva lo demás a una persona, con todo anotado», porque prometer perfección pasa factura al primer fallo.</p>
+</div>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">marcar como leído</button>
+</section>
+<section class="step" data-fig="3" data-kind="ferramenta" data-versao="jul/2026">
+<h2><span class="n">03</span> El defecto número uno tiene nombre: amnesia</h2>
+<p>La escena que delata a un mal agente de atención ocurre después de la llamada. El cliente llama por la noche, conversa, muestra interés y cuelga. Por la mañana, envía un mensaje: «¿y aquel precio del que hablamos?». Y recibe como respuesta: «Hola, ¿cómo puedo ayudarte?», como si la llamada nunca hubiera existido. El interés, el contexto: todo se evaporó.</p>
+<p>Es el defecto número uno del mercado y separa dos categorías de producto: el <b>formulario con voz</b>, que trata cada contacto como desconocido, y el verdadero agente de atención, con <b>memoria entre canales</b> — teléfono, WhatsApp y correo electrónico como puertas de una misma conversación.</p>
+<p>Piensa en la mejor recepcionista que hayas visto trabajar: "usted llamó ayer por la consulta de su mamá; ya me encargo de adelantarlo". No solo es rápida: <i>recuerda</i>. El agente profesional hace lo equivalente: mantiene una ficha única por cliente, identificada por el número de teléfono, y empieza cada conversación nueva releyendo el resumen de lo que ya se dijo.</p>
+<!-- exemplo-profissao -->
+<p>Volvamos al agente inmobiliario: la persona interesada que llamó a las 21 h preguntó por el financiamiento. A las 7:40, manda un WhatsApp: «¿puedes mostrarme la propiedad el sábado?». El agente con memoria responde: «Sí, el sábado a las 10 h, ¿en el apartamento del financiamiento del que hablamos ayer?». El que no tiene memoria responde: «¿Qué propiedad, por favor?», y la persona siente que volvió al final de la fila.</p>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">marcar como leído</button>
+</section>
+<section class="step" data-fig="4" data-kind="ferramenta" data-versao="jul/2026">
+<h2><span class="n">04</span> Las cinco formas de fallar y cómo prevenir cada una</h2>
+<p>Ningún agente de voz es perfecto, y esta clase no va a fingir lo contrario. La buena noticia: los que fallan frente al cliente casi siempre lo hacen de las mismas cinco maneras. Conocer la lista cambia tu posición en la mesa: dejas de comprar promesas y empiezas a verificar las salvaguardas.</p>
+<ul>
+<li><b>Callejón sin salida.</b> La conversación se atasca con una solicitud que él no sabe resolver y no deriva a nadie: el cliente insiste, se irrita, cuelga, y el equipo ni siquiera se entera.</li>
+<li><b>Transferencia a ciegas.</b> Incluso transfiere la llamada a una persona, pero solo le pasa la llamada: la conversación queda atrás y el cliente empieza de cero. Una transferencia bien hecha tiene un nombre — <span class="gterm" data-def="A passagem da ligação para uma pessoa de verdade, levando junto um resumo do que já foi conversado — quem é, o que quer, o que já foi dito." tabindex="0">desbordamiento</span> — y lleva el resumen consigo.</li>
+<li><b>Sordera de vocabulario.</b> Los nombres propios, los términos de tu sector y los acentos quedan anotados de forma incorrecta, y una respuesta correcta basada en una transcripción incorrecta sigue siendo una respuesta incorrecta.</li>
+<li><b>Pausas que se acumulan.</b> Cada etapa del relevo parece rápida por sí sola; si están mal coordinadas, la suma supera el medio segundo y la conversación se convierte en «¿aló? ¿se cortó?»</li>
+<li><b>Sin límites definidos.</b> Nadie escribió lo que nunca debe hacer por su cuenta, y el agente confirma descuentos que no existen, promete plazos que nadie autorizó o alguien malintencionado lo saca de su papel.</li>
+</ul>
+<p>Los estudios del sector muestran que, en las grandes empresas, menos de 1 de cada 8 pruebas de asistentes de voz se convierte en una operación real; casi siempre se debe a esta lista, no a la falta de tecnología.</p>
+<!-- exemplo-profissao -->
+<p>Una asistente administrativa de un consultorio odontológico, encargada de evaluar al operador que recomendó la franquicia, empieza por el quinto punto: la lista de lo que nunca resuelve por su cuenta — informar resultados de exámenes, dar orientación clínica, reprogramar una cirugía, negociar el precio. Todo eso le corresponde a ella; solo con la lista firmada el operador atiende la primera llamada de verdad.</p>
+<div class="qerr">
+<p class="qk">Error común</p>
+<p class="qerr-txt"><b>Poner la IA al teléfono sin un plan de derivación.</b> En la demostración nadie pide nada fuera de lo común y el plan parece innecesario, pero en la primera semana real llegan la queja, el caso urgente y el asunto delicado. Antes de la primera llamada, define cuándo le pasa el caso a una persona, a quién y con qué información.</p>
+</div>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">marcar como leído</button>
+</section>
+<div class="qsteps">
+<p class="qsk">Qué exigir antes de contratar (o entregar) un asistente de voz</p>
+<ol>
+<li><b>Desbordamiento demostrado en vivo.</b> Pide ver cómo transfieren la llamada a una persona junto con el resumen. "Tiene esa función" no cuenta; una demostración, sí.</li>
+<li><b>Registro de todas las conversaciones.</b> Cada llamada y mensaje anotados en un lugar que puedas leer después —sin eso, nunca te enteras del cliente que colgó irritado.</li>
+<li><b>Haz tu prueba antes de activar el servicio de verdad.</b> Llamas fingiendo ser cliente: una llamada normal y otra intentando sacarlo de su papel (pide un descuento que no existe).</li>
+<li><b>Límites por escrito.</b> La lista de lo que nunca decide por su cuenta, firmada antes del primer día, no después del primer problema.</li>
+<li><b>Memoria demostrada.</b> Llama, cuelga y envía un mensaje una hora después. Si no retoma la conversación, acabas de encontrar el defecto número uno.</li>
+</ol>
+</div>
+<!-- Decisão de registro: SEM .termdemo nesta aula — não há comando real a demonstrar (avaliação de serviço por voz, sem tela nem instrução digitável); os 4 slots de figura usam diagrama-de-mecanismo. -->
+<section class="practice" data-mode="analise" data-practice="p1">
+<p class="pk">Practica ahora <span class="pcount">0/3 hecho</span></p>
+<h3 class="ph">Evalúa a un asistente de voz como profesional — el caso de Márcia</h3>
+<p class="pgoal">Responder las 3 preguntas del caso y comparar con la respuesta modelo comentada — ~10 min.</p>
+<p class="psafe">Es un caso hipotético: no se establece ninguna conexión ni participa ninguna empresa real. Equivocarse aquí es el objetivo; mejor ahora que frente a un proveedor o un cliente.</p>
+<p><b>El caso.</b> Márcia es asistente administrativa de una clínica que solía perder las llamadas de la hora del almuerzo. Hace un mes, la clínica contrató a un agente de voz: responde al primer timbre y agenda consultas sin equivocarse de horario. Sin embargo, el martes una paciente llamó para pedir el resultado de un examen, insistió tres veces y colgó molesta, y nadie del equipo se enteró hasta que ella reclamó en recepción. Ayer, un paciente que había llamado por la mañana envió un WhatsApp por la tarde, y el agente respondió como si nunca hubiera hablado con él. El dueño de la clínica llamó a Márcia: «¿lo mantenemos, lo ajustamos o lo cancelamos?»</p>
+<p><b>Las 3 preguntas:</b></p>
+<ol>
+<li>¿En cuáles de los cinco modos de falla ya cayó el agente —y cuál es el más grave para una clínica?</li>
+<li>¿Qué debería exigir Márcia al proveedor antes de aceptar mantener el servicio?</li>
+<li>En su lugar, ¿mantienes, ajustas o cancelas? ¿Con qué condición?</li>
+</ol>
+<details>
+<summary>ver la clave comentada</summary>
+<p><b>1.</b> Dos modalidades: callejón sin salida (la paciente insistió y colgó sin que le pasaran la llamada —y el equipo ni siquiera se enteró, otra señal de un registro deficiente—) y amnesia entre canales (la conversación de WhatsApp empezó de cero). Lo más grave en una clínica es el callejón sin salida: el resultado de un examen es un asunto demasiado sensible para terminar en una frustración silenciosa; debía escalarse de inmediato.</p>
+<p><b>2.</b> Las que resuelven lo que falló: transferencia de llamadas demostrada en vivo, un registro que el equipo pueda leer (la clínica se enteró de la paciente por casualidad), límites por escrito —los exámenes y las indicaciones de salud nunca se resuelven solos— y memoria comprobada en la prueba de llamar y luego escribir.</p>
+<p><b>3.</b> Ajustar, con un plazo. El agente de atención ya cumple con el motivo por el que lo contrataron: que no se pierda ninguna llamada durante el almuerzo. Al dueño: "lo mantenemos por 30 días si el proveedor demuestra la transferencia de llamadas, el registro y la memoria; si no, cancelamos". Ni deslumbrarse con la demostración ni entrar en pánico por el primer fallo: exigir con criterio.</p>
+</details>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Lee el caso dos veces y anota cada síntoma de falla que reconozcas de la lista de los cinco.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Responde las 3 preguntas por escrito —dos líneas cada una bastan— antes de abrir la respuesta modelo.</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Compara con la clave de respuestas comentada, pregunta por pregunta. Está listo cuando comparaste las tres.</label></li>
+</ol>
+<p class="pdone">Acabas de evaluar a un operador de voz con criterio profesional — el mismo razonamiento que usarás ante un proveedor de verdad.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; A mesma ligação das 21h, dois destinos: respondida no primeiro minuto vira conversa; respondida de manhã encontra o cliente já comprado." data-fig="1">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<circle cx="110" cy="30" r="13" stroke="var(--accent)" stroke-width="1.5"></circle>
+<line stroke="var(--accent)" stroke-width="1.5" x1="110" x2="110" y1="30" y2="21"></line>
+<line stroke="var(--accent)" stroke-width="1.5" x1="110" x2="117" y1="30" y2="33"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="18">21:02 · llama el cliente</text>
+<path d="M96 40 C 70 52, 60 60, 58 72" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M124 40 C 150 52, 160 60, 162 72" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<rect height="36" rx="6" stroke="var(--accent)" stroke-width="1.5" width="88" x="16" y="76"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="91">atendido en</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="104">1.er minuto</text>
+<rect height="36" rx="6" stroke="var(--line2)" stroke-width="1.5" width="88" x="118" y="76"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="126" y="91">regreso a las 9h</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="126" y="104">del día siguiente</text>
+<path d="M60 112 v18" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M55 122 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M162 112 v18" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<rect height="30" rx="6" stroke="var(--warm)" stroke-width="1.5" width="88" x="16" y="134"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="153">visita agendada</text>
+<rect height="30" rx="6" stroke="var(--line2)" stroke-dasharray="4 4" stroke-width="1.5" width="88" x="118" y="134"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="126" y="153">cerró con otro</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="190">la venta se decide en minutos</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; O revezamento por dentro: cada etapa tem seu reloginho, e a seguinte começa antes de a anterior acabar — em fila, a pausa estouraria o meio segundo." data-fig="2">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="26" rx="5" stroke="var(--accent)" stroke-width="1.5" width="104" x="14" y="30"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="22" y="47">1 ESCUCHAR</text>
+<circle cx="104" cy="43" r="6" stroke="var(--accent)" stroke-width="1.5"></circle>
+<line stroke="var(--accent)" stroke-width="1.5" x1="104" x2="104" y1="43" y2="39"></line>
+<line stroke="var(--accent)" stroke-width="1.5" x1="104" x2="107" y1="43" y2="43"></line>
+<rect height="26" rx="5" stroke="var(--accent)" stroke-width="1.5" width="104" x="62" y="74"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="70" y="91">2 DECIDE</text>
+<circle cx="152" cy="87" r="6" stroke="var(--accent)" stroke-width="1.5"></circle>
+<line stroke="var(--accent)" stroke-width="1.5" x1="152" x2="152" y1="87" y2="83"></line>
+<line stroke="var(--accent)" stroke-width="1.5" x1="152" x2="155" y1="87" y2="87"></line>
+<rect height="26" rx="5" stroke="var(--warm)" stroke-width="1.5" width="96" x="110" y="118"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="118" y="135">3 HABLAR</text>
+<circle cx="192" cy="131" r="6" stroke="var(--warm)" stroke-width="1.5"></circle>
+<line stroke="var(--warm)" stroke-width="1.5" x1="192" x2="192" y1="131" y2="127"></line>
+<line stroke="var(--warm)" stroke-width="1.5" x1="192" x2="195" y1="131" y2="131"></line>
+<line stroke="var(--line2)" stroke-dasharray="3 3" stroke-width="1.5" x1="62" x2="62" y1="56" y2="74"></line>
+<line stroke="var(--line2)" stroke-dasharray="3 3" stroke-width="1.5" x1="110" x2="110" y1="100" y2="118"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="168">una empieza antes de que la otra termine:</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="182">la suma cabe en ~medio segundo</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Ligação e mensagem desembocam na mesma ficha: é ela que faz o atendente retomar a conversa — sem a ficha, cada canal recomeça do zero." data-fig="3">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="50" rx="6" stroke="var(--line2)" stroke-width="1.5" width="30" x="18" y="22"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="38" y1="30" y2="30"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="88">llamada · 21h</text>
+<rect height="30" rx="9" stroke="var(--line2)" stroke-width="1.5" width="44" x="18" y="104"></rect>
+<path d="M28 134 l-4 9 12 -9" stroke="var(--line2)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="158">mensaje · 7h40</text>
+<path d="M52 47 C 96 47, 106 74, 128 84" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M120 78 l8 6 -10 3" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M66 119 C 100 119, 108 106, 128 100" stroke="var(--accent)" stroke-width="1.5"></path>
+<path d="M119 97 l9 3 -8 6" stroke="var(--accent)" stroke-width="1.5"></path>
+<rect height="84" rx="6" stroke="var(--warm)" stroke-width="1.5" width="74" x="134" y="56"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="76">FICHA</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="89">ÚNICA</text>
+<line stroke="var(--line2)" stroke-width="1.5" x1="146" x2="196" y1="104" y2="104"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="146" x2="196" y1="116" y2="116"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="146" x2="184" y1="128" y2="128"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="188">distintas puertas, la misma conversación</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Um lado espelha o outro: para cada um dos cinco jeitos conhecidos de quebrar, uma exigência que você faz antes de assinar." data-fig="4">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="10" y="20">5 ERRORES</text>
+<rect height="122" rx="6" stroke="var(--line2)" stroke-width="1.5" width="88" x="10" y="28"></rect>
+<path d="M22 50 l5 -9 5 9 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="38" x2="88" y1="46" y2="46"></line>
+<path d="M22 73 l5 -9 5 9 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="38" x2="88" y1="69" y2="69"></line>
+<path d="M22 96 l5 -9 5 9 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="38" x2="88" y1="92" y2="92"></line>
+<path d="M22 119 l5 -9 5 9 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="38" x2="88" y1="115" y2="115"></line>
+<path d="M22 142 l5 -9 5 9 z" stroke="var(--line2)" stroke-width="1.5"></path>
+<line stroke="var(--line2)" stroke-width="1.5" x1="38" x2="88" y1="138" y2="138"></line>
+<path d="M102 89 h14" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M112 84 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="122" y="20">5 REQUISITOS</text>
+<rect height="122" rx="6" stroke="var(--warm)" stroke-width="1.5" width="88" x="122" y="28"></rect>
+<rect height="9" rx="2" stroke="var(--warm)" stroke-width="1.5" width="9" x="132" y="40"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="149" x2="200" y1="45" y2="45"></line>
+<rect height="9" rx="2" stroke="var(--warm)" stroke-width="1.5" width="9" x="132" y="63"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="149" x2="200" y1="68" y2="68"></line>
+<rect height="9" rx="2" stroke="var(--warm)" stroke-width="1.5" width="9" x="132" y="86"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="149" x2="200" y1="91" y2="91"></line>
+<rect height="9" rx="2" stroke="var(--warm)" stroke-width="1.5" width="9" x="132" y="109"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="149" x2="200" y1="114" y2="114"></line>
+<rect height="9" rx="2" stroke="var(--warm)" stroke-width="1.5" width="9" x="132" y="132"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="149" x2="200" y1="137" y2="137"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="10" y="174">para cada forma de fallar,</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="10" y="188">una salvaguarda en el contrato</text>
+</svg>
+</div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Resalta cualquier fragmento para convertirlo en una tarjeta de repaso.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-4 -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Resumen</p>
+<ul>
+<li>En las ventas por teléfono, los minutos deciden: la mayoría de los compradores se queda con quien responde primero, y esa es la carrera que el agente de voz existe para ganar.</li>
+<li>Por dentro, la conversación es un relevo entre escuchar, decidir y hablar; es la suma de las pequeñas demoras, no la inteligencia, lo que hace que la voz suene natural o trabada.</li>
+<li>La memoria entre canales es lo que distingue a un verdadero agente de atención de un formulario con voz: las llamadas y los mensajes deben llegar a la misma ficha del cliente.</li>
+<li>Se equivoca, y está bien: el profesional no espera perfección; rodea los cinco modos de falla con salvaguardas acordadas antes de la primera llamada real.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Tu siguiente paso</p>
+<p class="na-win">Acabas de adquirir la mirada de un evaluador: las cinco formas en que falla un operador de voz y los cinco requisitos que rodean cada una.</p>
+<p class="na-action">En los próximos 15 minutos, piensa en un negocio que conozcas bien y anota cuáles de los cinco requisitos tendría que cumplir antes de poner un agente de voz al teléfono. Guarda la nota: es tu guion para hablar con el proveedor.</p>
+<p class="na-hook">En la próxima clase, la pregunta que separa al aficionado del profesional: cómo probar la IA antes de ponerla frente al cliente, con un cuestionario y una calificación, para demostrar que funciona en vez de cruzar los dedos.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← ruta</a><a href="#aula-5">siguiente clase →</a></nav>
+<footer>Clase 4 · Cómo montar un negocio de servicios de IA · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — nunca resumo do recap acima -->
+<script id="cards-4" type="application/json">
+[
+  {"front":"Numa ligação de teste, o atendente de voz responde tudo certo, mas o cliente solta um 'alô, caiu?' entre uma fala e outra. Qual é o defeito por dentro?","back":"As três etapas estão trabalhando em fila, uma esperando a outra acabar, em vez de sobrepostas como um intérprete simultâneo. As pequenas demoras se acumulam e o silêncio passa do meio segundo que o ouvido tolera."},
+  {"front":"Um fornecedor faz uma demonstração impecável do atendente de voz e pressiona para fechar contrato hoje. Você assina?","back":"Não sem ver as salvaguardas funcionando: transbordo ao vivo com resumo junto, registro que você consegue abrir e ler, seu próprio teste tentando tirá-lo do papel, limites por escrito e o teste de ligar e depois escrever. Demonstração feliz não prova operação real."},
+  {"front":"Você tem uma ligação e uma mensagem para descobrir se um atendente de voz sofre do defeito número um. O que você faz?","back":"Liga, trata de um assunto específico, desliga — e uma hora depois manda mensagem retomando ('e aquele horário?'). Se ele responder do zero, é amnésia entre canais; se retomar de onde parou, passou no teste."}
+]
+</script>
+<!--
+COMPLETUDE aula-4 | tipo=FERRAMENTA | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: conhece os 5 modos de falha e sabe o que exigir
+  [OK] why                .why após a promessa (1) — ligação perdida hoje + alguém vai te vender/pedir um atendente
+  [OK] tempo              data-tempo="20min" no view (1); ~2,0k palavras (~10min) + prática ~10min, arredondado p/ cima
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: corretor 21h, assistente adm de contabilidade no almoço, corretor WhatsApp 7h40, assistente adm de consultório odontológico)
+  [OK] apoio-visual       figura diagrama-de-mecanismo legendada por step (4/4 data-fig, data-cap que ensina; herofig = metáfora balcão/recado, registro separado)
+  [OK] practice           .practice[data-mode="analise"] (exatamente 1) — mini-caso Márcia + 3 perguntas + gabarito em <details>; análise porque fazer de verdade exige contratar serviço de voz
+  [OK] psafe              .psafe dentro da prática (1) — caso no papel, nada é ligado ou contratado
+  [OK] pgoal-tempo        .pgoal com "~10 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho (1) — 4 <li> afirmativos, síntese ≤5 linhas, zero pergunta
+  [OK] next-action        .next-action no fecho (1) — microvitória nomeada + microação ≤15min + gancho aula 5 (testar com gabarito e nota)
+  [OK] cards              <script id="cards-4"> presente (3 cartões: diagnóstico, decisão, aplicação)
+  [OK] anti-duplicacao    3 testes: nenhuma substring ≥6 palavras recap↔cartão; 0 frentes-afirmação; operação difere (recap sintetiza; cartões diagnosticam/decidem/aplicam em cenário)
+  [N/A] teste-se-FUND     aula é FERRAMENTA (obrigação não se aplica); sem teste-se opcional
+Dosagem FERRAMENTA pool≤5: qerr(2: prometer que "nunca erra" em s2; sem plano de transbordo em s4) + qsteps(1: as 5 exigências, após s4) + cartões(3) + mini-caso(1 = a própria prática de análise). SEM quiz. Espaçamento: quadros em s2 e s4 (não adjacentes), qsteps fora dos steps; s1 e s3 sem quadro. Rampa de acesso antes do diagrama do revezamento (s2: "leia como uma corrida de revezamento"). Jargão: zero siglas e zero termos-sentinela no texto do aluno — o conceito de demora traduzido como "o tempo entre o cliente terminar de falar e a IA começar a responder"; .gterm: "atendente de voz" (s1) e "transbordo" (s4). Sem .termdemo (nenhum comando real). data-versao="jul/2026" nos 3 steps ferramenta (s2–s4). Zero emoji, zero exclamação dupla.
+-->
+</section>

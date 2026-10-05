@@ -1,0 +1,272 @@
+<section class="view" data-aula="2" data-tempo="20min" id="v-aula-2">
+<header class="hero"><div class="hero-inner">
+<div>
+<p class="kicker">Curso · Lección 2</p>
+<h1>El motor <em>por dentro</em>:<br/>las 3 capas</h1>
+<p class="promise">Al final de esta clase podrás dibujar en un papel las 3 capas de cualquier automatización profesional e identificar qué capa falta cuando algo que te ofrecieron es demasiado frágil para justificar su precio.</p>
+<!-- tempo renderizado pelo motor logo após a promessa -->
+<p class="why">En la clase 1 elegiste una tarea y un nombre. Ahora viene la parte en la que la mayoría compra y vende a ciegas: alguien muestra una automatización «lista» y no sabes si resistirá el trabajo con un cliente real. El mercado está lleno de montajes frágiles que se venden como profesionales. Quien entiende el motor por dentro deja de depender de la palabra del vendedor.</p>
+<p class="cue"><span class="arw">↓</span> cargo para estudiar</p>
+</div>
+<!-- herofig: METÁFORA DO MUNDO REAL — cozinha de casa (tudo numa bancada) vs cozinha profissional (estações + comandas) -->
+<div class="herofig"><svg aria-hidden="true" fill="none" viewbox="0 0 300 240">
+<line stroke="var(--line2)" stroke-dasharray="4 5" stroke-width="1" x1="112" x2="112" y1="24" y2="224"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="1" x="16" y="34">COCINA DE CASA</text>
+<rect height="52" rx="4" stroke="var(--line2)" stroke-width="1.5" width="78" x="18" y="132"></rect>
+<line stroke="var(--line2)" stroke-width="1" x1="18" x2="96" y1="148" y2="148"></line>
+<circle cx="42" cy="122" r="10" stroke="var(--line2)" stroke-width="1.5"></circle>
+<line stroke="var(--line2)" stroke-width="1.5" x1="52" x2="66" y1="122" y2="122"></line>
+<path d="M36 104 q3 -6 0 -12 M46 104 q3 -6 0 -12" stroke="var(--line2)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="206">todo en una sola mesa de trabajo</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" letter-spacing="1" x="126" y="34">COCINA PROFESIONAL</text>
+<line stroke="var(--warm)" stroke-width="1.5" x1="126" x2="282" y1="62" y2="62"></line>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="136" y="62"></rect>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="196" y="62"></rect>
+<rect height="22" stroke="var(--warm)" stroke-width="1.5" width="16" x="254" y="62"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="126" y="102">comandos: nada se pierde</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="126" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="132" y="200">recibe</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="182" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="190" y="200">decide</text>
+<rect height="56" rx="4" stroke="var(--accent)" stroke-width="1.5" width="44" x="238" y="128"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="252" y="200">sale</text>
+<path d="M170 156 h8" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M175 151 l5 5 -5 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M226 156 h8" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M231 151 l5 5 -5 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="11" x="126" y="226">la misma comida · otra estructura</text>
+</svg></div>
+</div></header>
+<div class="layout">
+<div class="col">
+<section class="step" data-fig="1" data-kind="fundamento">
+<h2><span class="n">01</span> Piezas para armar: excelentes para empezar, arriesgadas para mantener</h2>
+<p>Hay herramientas —n8n y Make son las más conocidas— en las que puedes crear una automatización encajando bloques prediseñados en la pantalla. Cada bloque hace una cosa: «cuando llegue un correo electrónico así», «copia a la hoja de cálculo», «envía este aviso». Piensa en piezas para armar: sin obras ni herramientas especiales, cualquier adulto puede encajarlas, y en una tarde algo ya funciona.</p>
+<p>Para empezar, es una ventaja total: pruebas una idea con alguien real y entregas las primeras soluciones gratis.</p>
+<p>El riesgo aparece cuando el juguete se convierte en puente: el montaje deja de ser una prueba y pasa a sostener el trabajo de alguien. Entonces surgen tres grietas. El costo: cada bloque que consulta a la IA cuesta unos centavos, y el total del mes se convierte en una sorpresa. La búsqueda: cuando algo se rompe, encontrar el bloque culpable es trabajo manual, clic por clic. La recuperación: no existe una «versión de ayer guardada»; si haces cambios y empeora, no es fácil volver atrás.</p>
+<!-- exemplo-profissao -->
+<p>La asistente administrativa que concilia a mano la agenda de la dirección con la hoja de cálculo de pedidos arma un flujo sencillo con bloques: llega un pedido nuevo por correo electrónico, se registra en la hoja de cálculo y el director recibe un aviso. Tres meses después, toda la empresa confía en eso. Un día, el aviso no se envía y un pedido grande pasa desapercibido. Ella pasa la tarde haciendo clic bloque por bloque, buscando dónde se rompió la cadena.</p>
+<div class="qerr">
+<p class="qk">Error común</p>
+<p class="qerr-txt"><b>Automatizar antes de validar manualmente.</b> Los bloques son tan rápidos que dan ganas de automatizar desde el primer día. Haz la tarea a mano algunas veces antes: si la regla no cabe en un papel, la automatización solo acelera el error y lo oculta.</p>
+</div>
+<div class="mobfig" data-mobfig="1"></div>
+<button class="readbtn" data-read="s1">marcar como leído</button>
+</section>
+<section class="step" data-fig="2" data-kind="fundamento">
+<h2><span class="n">02</span> Toda automatización seria tiene tres capas, y ya conoces las tres</h2>
+<p>Mira la imagen de arriba: la cocina de casa y la profesional preparan la misma comida. La diferencia está en la estructura: estaciones separadas y una barra de pedidos donde no se pierde ninguno. La automatización profesional funciona igual: tres capas.</p>
+<p><b>Capa 1 — Entrada.</b> Todo lo que activa la automatización llega por un solo lugar y se anota en el momento: como el pedido que entra a la barra. Correo, formulario, mensaje: primero se registra y después se trabaja.</p>
+<p><b>Capa 2 — Decisión.</b> La cocina distingue dos tipos de pedidos. El plato del menú sigue una regla fija: misma receta, mismo resultado, siempre: «si el monto supera cierta cifra, requiere aprobación». El pedido fuera del menú exige criterio: entender un texto ambiguo, decidir caso por caso; solo ahí entra la IA. Las reglas fijas son baratas y predecibles; el criterio es caro: úsalo donde valga la pena.</p>
+<p><b>Capa 3 — Salida con registro.</b> El resultado aparece — y queda anotado en el <span class="gterm" data-def="O caderno da automação: o que ela fez, quando, para quem e com qual resultado. É o que permite auditar e refazer o que falhou." tabindex="0">diario de navegación</span>: qué se hizo, cuándo, para quién. Es el comprobante archivado. Sin esta capa, un error queda invisible hasta que el cliente se queja.</p>
+<!-- exemplo-profissao -->
+<p>Los borradores de alquiler de un abogado solo cambian de nombre, fechas y montos. Entrada: llega la ficha del nuevo inquilino y se registra. Decisión: la regla fija completa el modelo; un caso fuera de lo común —un garante fuera del país— queda a criterio del propio abogado. Salida: el borrador queda listo y la bitácora anota qué modelo se usó, qué datos se ingresaron y en qué fecha. Si un contrato sale mal, sabe cuál fue y rehace solo ese.</p>
+<div class="mobfig" data-mobfig="2"></div>
+<button class="readbtn" data-read="s2">marcar como leído</button>
+</section>
+<div class="qbefore-after">
+<div class="qba-col qba-before">
+<p class="qba-lbl">Antes</p>
+<p class="qba-txt">La automatización de borradores funciona con bloques, sin registro. El abogado no confía: los revisa uno por uno, unos 40 minutos al día, sin saber qué se procesó durante la madrugada.</p>
+</div>
+<div class="qba-col qba-depois">
+<p class="qba-lbl">Después</p>
+<p class="qba-txt">Con la salida registrada, abre el cuaderno de bitácora y revisa solo las que están marcadas como fuera de lo normal: unos 5 minutos, con la certeza de que nada pasó desapercibido.</p>
+</div>
+<p class="qba-saldo">Saldo: <b>~35 minutos recuperados por día</b> — y una respuesta lista para «¿qué hizo esta automatización ayer?».</p>
+</div>
+<section class="step" data-fig="3" data-kind="fundamento">
+<h2><span class="n">03</span> Cuatro señales de que el montaje se volvió demasiado serio</h2>
+<p>Nadie abandona los bloques por principio: la decisión es un diagnóstico. Llega un punto en que mantener el armado cuesta más que reconstruirlo en tres capas; cuatro señales muestran que llegaste ahí.</p>
+<ul>
+<li><b>Mueve dinero o datos sensibles.</b> Contratos, cobros, nómina: equivocarse aquí cuesta dinero o una demanda, no solo retrabajo.</li>
+<li><b>Alguien depende de ella todos los días.</b> Dejó de ser un experimento y se convirtió en la operación de otra persona.</li>
+<li><b>Si falla de madrugada, nadie se da cuenta.</b> El daño solo se nota cuando el cliente pregunta: «¿dónde está mi respuesta?».</li>
+<li><b>Nadie sabe cuánto cuesta ejecutarlo al mes.</b> Llega la factura, pero no la explicación.</li>
+</ul>
+<p>Dos o más señales activas: es hora de pasar a la capa profesional; la misma lógica, reconstruida con tres refuerzos. El registro de actividad. La bandeja de pendientes: lo que falla no desaparece, queda a la espera de que lo vuelvan a hacer. Y la versión de ayer guardada, para volver a ella en segundos. La migración nunca ocurre toda de una vez: primero cambia la automatización que más duele.</p>
+<!-- exemplo-profissao -->
+<p>Volvamos al abogado. La automatización de borradores creció: 30 contratos por semana, y ahora también envía la solicitud de firma: un compromiso jurídico en marcha. Súmale la dependencia diaria y los datos sensibles: hay demasiadas señales encendidas. Mantenerlo en bloques no es ahorrar; es apostar con el nombre del bufete en juego.</p>
+<div class="quiz" data-answer="b">
+<p class="qk">Ponte a prueba</p><p class="q">Hay tres automatizaciones funcionando en bloques. ¿Cuál necesita primero la capa profesional?</p>
+<button class="opt" data-k="a">El aviso interno que le recuerda al equipo los cumpleaños del mes</button>
+<button class="opt" data-fb="Dinheiro em movimento e dependência diária: dois sinais acesos ao mesmo tempo. É onde uma falha silenciosa custa mais caro." data-k="b">El cobro que pone en movimiento los pagos de los clientes todos los días</button>
+<button class="opt" data-k="c">El borrador de respuestas que revisas antes de enviar</button>
+<p class="qfb"></p>
+</div>
+<div class="mobfig" data-mobfig="3"></div>
+<button class="readbtn" data-read="s3">marcar como leído</button>
+</section>
+<section class="step" data-fig="4" data-kind="fundamento">
+<h2><span class="n">04</span> No construyes la capa profesional: cobras por ella y contratas correctamente</h2>
+<p>La tranquilidad de esta clase: no vas a construir nada de esto; la capa profesional es obra de quien programa. Tu papel, el mejor pagado de la cadena, es otro: diseñar las capas, señalar cuál falta y contratar haciendo las preguntas adecuadas.</p>
+<p>Son cuatro preguntas. ¿Dónde está la bitácora? Cuando algo falla, ¿queda en una bandeja de pendientes o desaparece? ¿Se puede volver a la versión de ayer si algo empeora? ¿Y cuánto cuesta ejecutar esto mil veces al mes? Quien construye de verdad responde las cuatro sin dudar. Quien vende una fachada cambia de tema en la segunda.</p>
+<p>Al comprar, dejas de aceptar presupuestos a ciegas. Al vender, el diseño de las capas se convierte en la primera página de la propuesta —y el cliente entiende por qué cobras más que por el montaje de su sobrino.</p>
+<!-- exemplo-profissao -->
+<p>Una contadora recibe una propuesta de automatización de nómina a un precio demasiado bueno para ser cierto. Hace las cuatro preguntas. En la segunda — "y cuando falla, ¿dónde termina?" —, el vendedor tartamudea: "nosotros estamos pendientes". Ella la rechaza de inmediato: la nómina mueve los salarios de personas reales, y "estar pendientes" no es una capa, es una promesa.</p>
+<div class="mobfig" data-mobfig="4"></div>
+<button class="readbtn" data-read="s4">marcar como leído</button>
+</section>
+<div class="qanchor"><p>Es frágil toda automatización que no sabe contar lo que hizo ayer.</p></div>
+<!-- Decisão de registro: SEM .termdemo nesta aula — não há comando real a demonstrar; todos os slots de figura usam diagrama-de-mecanismo. -->
+<section class="practice" data-mode="prompt" data-practice="p1">
+<p class="pk">Practica ahora <span class="pcount">0/3 hecho</span></p>
+<h3 class="ph">Dibuja las 3 capas de una tarea tuya — con una IA de chat</h3>
+<p class="pgoal">Un esquema en texto, hecho por la IA, con las 3 capas de UNA tarea repetitiva de tu trabajo — y la capa más frágil señalada. ~10 min.</p>
+<p class="psafe">Solo conversarás con una IA de chat: nada se conecta con tu trabajo, nada se crea ni se modifica. Si la respuesta es confusa, pega de nuevo la solicitud y ajusta lo que está entre &lt; &gt;.</p>
+<p>El bloque de abajo parece largo, pero solo es una solicitud por escrito, un formulario: los fragmentos entre &lt; &gt; son los campos que completas; el resto no lo tocas.</p>
+<div class="pcodewrap"><button class="pcopy" type="button">copiar</button><pre class="pcode">Desenhe, em texto simples e sem nenhum termo técnico,
+a automação de uma tarefa repetitiva do meu trabalho.
+
+Minha tarefa: &lt;descreva a tarefa, ex.: conferir os pedidos da planilha e avisar o cliente&gt;
+Ela começa quando: &lt;o que dispara a tarefa, ex.: chega um pedido novo por e-mail&gt;
+O resultado no fim: &lt;o que precisa sair, ex.: cliente avisado e pedido anotado&gt;
+
+Desenhe a automação nestas 3 camadas:
+1. ENTRADA — o que chega, por onde, o que é anotado na hora;
+2. DECISÃO — o que segue regra fixa e o que exige julgamento;
+3. SAÍDA COM REGISTRO — o que sai e o que fica no diário de bordo.
+
+No fim, aponte a camada mais frágil se isso fosse
+montado às pressas, e por quê.</pre></div>
+<ol class="psteps">
+<li><label><input data-ptask="1" type="checkbox"/> Abre ChatGPT, Claude o Gemini — cualquiera sirve, incluso una cuenta gratuita. Copia el bloque de arriba y cambia los tres fragmentos entre &lt; &gt; por tu tarea.</label></li>
+<li><label><input data-ptask="2" type="checkbox"/> Envía y lee con calma. Lo que debes ver: las 3 capas identificadas, con tu tarea distribuida entre ellas —algo como «ENTRADA: el pedido llega por correo electrónico y se anota».</label></li>
+<li><label><input data-ptask="3" type="checkbox"/> Anota en un papel la capa que la IA señaló como frágil y escribe 1 pregunta que le harías a quien fuera a construirla. Está listo cuando tengas el esquema y la pregunta anotados.</label></li>
+</ol>
+<p class="pdone">Acabas de diseñar el motor de una automatización profesional — la hoja que, frente a un presupuesto, distingue a quien compra una promesa de quien contrata un servicio.</p>
+</section>
+</div>
+<aside class="rail"><div class="railsticky">
+<div class="figstage">
+<div class="fig on" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Poucas peças resolvem rápido; quando a pilha passa a sustentar peso de verdade, cruza um limite que os blocos não seguram." data-fig="1">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<line stroke="var(--warm)" stroke-dasharray="5 4" stroke-width="1.5" x1="14" x2="206" y1="72" y2="72"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="14" y="64">límite del juguete</text>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="28" y="146"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="28" y="122"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="24" y="184">prueba: ok</text>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="130" y="146"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="134" y="122"></rect>
+<rect height="20" rx="3" stroke="var(--accent)" stroke-width="1.5" width="34" x="128" y="98"></rect>
+<rect height="20" rx="3" stroke="var(--line2)" stroke-width="1.5" width="34" x="136" y="74"></rect>
+<rect height="20" rx="3" stroke="var(--line2)" stroke-width="1.5" width="34" x="132" y="50"></rect>
+<path d="M147 94 l6 8 -8 6 7 8" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="120" y="184">operación: se divide</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; As 3 camadas: tudo entra por um lugar e é anotado; a decisão separa regra fixa de julgamento; nada sai sem registro." data-fig="2">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="32" rx="6" stroke="var(--accent)" stroke-width="1.5" width="140" x="40" y="12"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="32">1 ENTRADA · anota</text>
+<path d="M110 44 v12" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M105 50 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="52" rx="6" stroke="var(--accent)" stroke-width="1.5" width="140" x="40" y="64"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="82">2 DECISIÓN</text>
+<line stroke="var(--line2)" stroke-width="1" x1="110" x2="110" y1="88" y2="110"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="50" y="104">regla fija</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="118" y="104">criterio</text>
+<path d="M110 116 v12" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M105 122 l5 8 5 -8" stroke="var(--warm)" stroke-width="1.5"></path>
+<rect height="32" rx="6" stroke="var(--warm)" stroke-width="1.5" width="140" x="40" y="136"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="52" y="156">3 RESULTADO + registro</text>
+<rect height="22" rx="2" stroke="var(--warm)" stroke-width="1.5" width="20" x="186" y="142"></rect>
+<line stroke="var(--warm)" stroke-width="1" x1="190" x2="202" y1="149" y2="149"></line>
+<line stroke="var(--warm)" stroke-width="1" x1="190" x2="202" y1="155" y2="155"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="40" y="188">el diario de navegación queda aquí</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Os 4 sinais de migração: dois acesos ao mesmo tempo já empurram a automação dos blocos para a camada profissional." data-fig="3">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="60" rx="6" stroke="var(--line2)" stroke-width="1.5" width="80" x="20" y="70"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="96">automatización</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="30" y="110">en bloques</text>
+<circle cx="34" cy="52" r="4" stroke="var(--warm)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="56">dinero</text>
+<circle cx="34" cy="152" r="4" stroke="var(--warm)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="156">todos los días</text>
+<circle cx="34" cy="30" r="4" stroke="var(--line2)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="34">dato sensible</text>
+<circle cx="34" cy="174" r="4" stroke="var(--line2)" stroke-width="1.5"></circle>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="42" y="178">¿costo?</text>
+<path d="M104 100 h28" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M126 95 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="102" y="92">2+ señales</text>
+<rect height="60" rx="6" stroke="var(--accent)" stroke-width="1.5" width="72" x="136" y="70"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="96">capa</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="146" y="110">profesional</text>
+</svg>
+</div>
+<div class="fig" data-cap="&lt;b&gt;Fig.&lt;/b&gt; Você desenha as camadas e faz as 4 perguntas; quem programa constrói — e o cliente paga pelo desenho e pela garantia." data-fig="4">
+<svg aria-hidden="true" fill="none" viewbox="0 0 220 200">
+<rect height="90" rx="5" stroke="var(--accent)" stroke-width="1.5" width="70" x="18" y="40"></rect>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="62" y2="62"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="84" y2="84"></line>
+<line stroke="var(--line2)" stroke-width="1.5" x1="28" x2="78" y1="106" y2="106"></line>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="150">tu diseño</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="18" y="164">3 capas</text>
+<path d="M92 85 h32" stroke="var(--warm)" stroke-width="1.5"></path>
+<path d="M118 80 l6 5 -6 5" stroke="var(--warm)" stroke-width="1.5"></path>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="88" y="74">4 preguntas</text>
+<rect height="90" rx="5" stroke="var(--line2)" stroke-width="1.5" width="72" x="130" y="40"></rect>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="70">quién</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="84">programa</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="140" y="98">construye</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="130" y="150">cobras por el</text>
+<text fill="var(--muted)" font-family="var(--mono)" font-size="10" x="130" y="164">diseño + garantía</text>
+</svg>
+</div>
+</div>
+<p class="railcap"></p>
+<div class="steps-ind"></div>
+<p class="sidenote">Resalta cualquier fragmento para convertirlo en una tarjeta de repaso.</p>
+</div></aside>
+</div>
+<!-- FECHO — ordem fixa: recap-autor → next-action → cards-2 -->
+<div class="fecho-wrap">
+<div class="recap-autor">
+<p class="rak">Resumen</p>
+<ul>
+<li>Las herramientas de bloques dan velocidad al principio; cuando el trabajo de alguien empieza a depender de ellas, aparecen las grietas.</li>
+<li>La automatización profesional tiene tres capas: por dónde entra todo, quién decide —regla fija o criterio— y la salida registrada.</li>
+<li>El diario de bitácora separa el servicio de la promesa: registra qué pasó, cuándo y para quién, y permite rehacer lo que falló.</li>
+<li>El dinero en movimiento, los datos sensibles, la dependencia diaria y los costos impredecibles son señales de migración; dos señales juntas ya bastan.</li>
+<li>Tu papel no es construir: es diseñar las capas, cobrar por ese diseño y contratar la construcción haciendo las preguntas correctas.</li>
+</ul>
+</div>
+<div class="next-action">
+<p class="nak">Tu siguiente paso</p>
+<p class="na-win">Acabas de conseguir el mapa que la mayoría de los vendedores de automatización espera que el cliente no tenga.</p>
+<p class="na-action">En los próximos 15 minutos, marca con una X, en el dibujo de la práctica, la capa más frágil y escribe la primera pregunta que le harías a quien la construya.</p>
+<p class="na-hook">En la próxima clase armarás tu motor de contenido: la máquina que hace que tu nombre aparezca cada semana sin que te vuelvas rehén de las publicaciones.</p>
+</div>
+</div>
+<nav class="lnav"><a href="#trilha">← ruta</a><a href="#aula-3">siguiente clase →</a></nav>
+<footer>Clase 2 · Cómo crear un negocio de servicios de IA · INEMA.CLUB PRO</footer>
+<!-- cartões: recuperação ativa — nunca resumo do recap acima -->
+<script id="cards-2" type="application/json">
+[
+  {"front":"Uma automação entrega certinho há meses, mas ninguém sabe dizer o que ela fez ontem. Qual camada falta — e qual o risco escondido?","back":"Falta a terceira: a saída registrada no diário de bordo. Sem ela, um erro só aparece quando o cliente reclama — e não dá para refazer apenas o caso que quebrou."},
+  {"front":"Um construtor oferece a mesma automação pela metade do preço, \"só sem o diário de bordo\". Você fecha o negócio?","back":"Não. O desconto remove exatamente o que permite auditar falhas e refazer casos perdidos. Quando quebrar — e vai quebrar —, a economia vira prejuízo e o problema fica com você."},
+  {"front":"No desenho da camada de decisão, o que trava em regra fixa e o que vai para o julgamento da IA?","back":"Regra fixa: o que é testável e dá o mesmo resultado sempre (valor acima de X, prazo vencido) — barato e previsível. Julgamento: interpretar texto ambíguo e decidir caso a caso — é onde a IA vale o custo."},
+  {"front":"Uma cliente pede orçamento para automatizar respostas a e-mails de reclamação. Como você divide o trabalho entre as camadas?","back":"Entrada: toda reclamação chega por um lugar só e é anotada antes de tudo. Decisão: a IA julga o tom e rascunha; casos com valor alto ou ameaça de processo travam em regra fixa e vão para revisão humana. Saída: resposta enviada e anotada no diário."}
+]
+</script>
+<!--
+COMPLETUDE aula-2 | tipo=FUNDAMENTO | steps=4
+  [OK] promise            .promise no cold-open (1) — verificável: desenhar as 3 camadas no papel + identificar a camada que falta
+  [OK] why                .why após a promessa (1) — problema real: comprar e vender automação no escuro, mercado cheio de montagem frágil
+  [OK] tempo              data-tempo="20min" no view (1); ~1.9k palavras (≈9,5min) + prática ~10min + 1 quiz (~30s), arredondado p/ cima = 20min
+  [OK] exemplo-profissao  exemplo aplicado em 100% dos steps (4/4: assistente administrativa, advogado, advogado, contadora — situações novas, sem reuso da aula 1)
+  [OK] apoio-visual       figura diagrama-de-mecanismo legendada por step (4/4 data-fig, data-cap que ensina); herofig = metáfora cozinha de casa vs profissional
+  [OK] practice           .practice[data-mode="prompt"] (exatamente 1) — realiza a promise: a IA desenha as 3 camadas da tarefa do aluno
+  [OK] psafe              .psafe dentro da prática (1) — só conversa com IA de chat, nada se conecta nem altera
+  [OK] pgoal-tempo        .pgoal com "~10 min" declarado (1)
+  [OK] recap-autor        .recap-autor no fecho (1) — 5 <li> afirmativos, síntese, zero pergunta
+  [OK] next-action        .next-action no fecho (1) — microvitória nomeada + microação 15min + gancho aula 3 (motor de conteúdo)
+  [OK] cards              <script id="cards-2"> presente (4 cartões: diagnóstico, decisão, contraste, aplicação — zero afirmação na frente)
+  [OK] anti-duplicacao    3 testes: sem substring ≥6 palavras recap↔cartão; 100% frentes em pergunta/decisão/contraste/aplicação; operação difere (recap afirma, cartões exigem recuperar/decidir/aplicar)
+  [OK] teste-se-FUND      tipo=FUNDAMENTO: presente (1 quiz no step 3, data-fb só na correta)
+Dosagem pool=5: quiz(1) + cartões(4) + qbefore-after(1, saldo ~35min/dia) + qanchor(1) + qerr(1, automatizar antes de validar). Espaçamento: qerr no step 1, quiz no step 3 (steps 2 e 4 limpos — nunca 2 quadros em steps adjacentes); qbefore-after standalone entre s2 e s3; qanchor standalone após s4. Rampa de acesso antes do bloco colável da prática (formulário: campos entre < >). Jargão traduzido: fila = bandeja de pendências; registro = diário de bordo; versionamento = versão de ontem guardada; sem API/JSON/terminal/servidor. Sem .termdemo (nenhum comando real nesta aula).
+-->
+</section>
